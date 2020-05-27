@@ -1,5 +1,8 @@
 import React from "react"
 import "./App.scss"
+import Header from "./Components/Header/Header"
+import MainPage from "./Pages/MainPage/MainPage"
+import Footer from "./Components/Footer/Footer"
 // import { Provider } from "react-redux"
 import { createStore, applyMiddleware } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension"
@@ -21,19 +24,18 @@ import { observer, Provider } from "mobx-react"
 //   )
 // )
 
-const store = observable({
-  example: 0,
-})
+// const store = observable({
+//   example: 0,
+// })
 
 // sagaMiddleware.run(eventsSaga)
 
 const App: React.FC = () => (
-  <Provider store={store.example}>
-    <div className={"wrapper"}>
-      <StaticItem />
-      <DinamicItem />
-    </div>
-  </Provider>
+  <div className={"wrapper"}>
+    <Header />
+    <MainPage />
+    <Footer />
+  </div>
 )
 
-export default observer(App)
+export default App
