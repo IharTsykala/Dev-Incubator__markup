@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SocialNetworks from "../SocialNetworks/SocialNetworks"
 
 const Footer: React.FunctionComponent = () => {
