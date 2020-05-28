@@ -1,20 +1,32 @@
-import React, { useState } from "react"
+import React from "react"
+import SocialNetworkIcon from "../SocialNetworkIcon/SocialNetworkIcon"
+import pinterest from "../../assets/pinterest2.png"
+import twitter from "../../assets/twitter.png"
+import facebook from "../../assets/facebook.png"
+import basketballBall from "../../assets/basketballBall.png"
 
-// type SearchProps = {
-//   dispatch: any,
-// }
+const arraySocialNetworks = [
+  { nameIcon: "pinterest", iconImg: pinterest },
+  { nameIcon: "twitter", iconImg: twitter },
+  { nameIcon: "facebook", iconImg: facebook },
+  { nameIcon: "basketballBall", iconImg: basketballBall },
+]
 
 const SocialNetworks: React.FunctionComponent = () => {
   return (
     <div className={"social-networks"}>
       <div className={"social-networks__header"}>Follow Us</div>
-      <div className={"social-networks__icons"}></div>
+      <ul className={"social-networks__icons-list"}>
+        {arraySocialNetworks.map((item: any, index: number) => (
+          <SocialNetworkIcon
+            key={index}
+            iconImg={item.iconImg}
+            nameIcon={item.nameIcon}
+          />
+        ))}
+      </ul>
     </div>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default SocialNetworks

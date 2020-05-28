@@ -2,7 +2,9 @@
 $backgroundColorBody: cornflowerblue;
 $backgroundColorWrapper: #fff;
 $backgroundColorHeader: #eff0f2;
+$backgroundColorFooter: #262b2e;
 //color
+$baseLightColor: #bbb8b9;
 //width
 $maxWrapperWidth: 1600px;
 $wrapperWidth: 100vw;
@@ -13,6 +15,8 @@ $footerHeight: 320px;
 $logoHeaderHeight: 60px;
 //padding
 $paddingHorizonContent: 135px;
+//gap
+$iconColumnGap: 5px;
 
 * {
   margin: 0;
@@ -50,5 +54,23 @@ body {
   height: 100%;
 }
 
+.footer {
+  background-color: $backgroundColorFooter;
+  display: grid;
+}
+
+.social-networks {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  .social-networks__header {
+    color: $baseLightColor;
+  }
+  .social-networks__icons-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $iconColumnGap;
+  }
+}
 
 
