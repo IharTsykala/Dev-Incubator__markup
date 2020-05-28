@@ -1,17 +1,26 @@
 //background
-$backgroundColorBody:cornflowerblue;
-$backgroundColorWrapper:#fff;
+$backgroundColorBody: cornflowerblue;
+$backgroundColorWrapper: #fff;
+$backgroundColorHeader: #eff0f2;
+//color
 //width
 $maxWrapperWidth: 1600px;
 $wrapperWidth: 100vw;
+$logoWidth: 130px;
 //height
 $headerHeight: 110px;
 $footerHeight: 320px;
+$logoHeight: 60px;
+//padding
+$paddingHorizonContent: 135px;
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: $backgroundColorBody;
 }
 
@@ -23,4 +32,22 @@ body {
   display: grid;
   grid-template-rows: $headerHeight 1fr $footerHeight;
 }
+
+.header {
+  padding: 0 $paddingHorizonContent;
+  background-color: $backgroundColorHeader;
+    .header__logo {
+      display: grid;
+      align-items: end;
+      height: 100%;
+      width: $logoWidth;
+    }
+}
+
+.logo {
+  width: $logoWidth;
+  height: $logoHeight;
+}
+
+
 
