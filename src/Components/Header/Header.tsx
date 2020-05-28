@@ -1,9 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import Logo from "../Logo/Logo"
-
-// type SearchProps = {
-//   dispatch: any,
-// }
 
 const Header: React.FunctionComponent = () => {
   return (
@@ -14,9 +10,5 @@ const Header: React.FunctionComponent = () => {
     </header>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default Header
