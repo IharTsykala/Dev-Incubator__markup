@@ -21,6 +21,7 @@ $footerIconHeight: 40px;
 $paddingHorizonContent: 135px;
 $paddingSVG: 20%;
 //gap
+$socialNetworkGap: 5px;
 $iconColumnGap: 10px;
 
 * {
@@ -69,6 +70,7 @@ body {
   justify-self: center;
   align-self: center;
   grid-template-rows: repeat(2, 1fr);
+  row-gap: $socialNetworkGap;
   .social-networks__header {
     color: $baseLightColor;
     justify-self: center;
