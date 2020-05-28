@@ -1,15 +1,17 @@
 import React from "react"
 import SocialNetworkIcon from "../SocialNetworkIcon/SocialNetworkIcon"
-import pinterest from "../../assets/pinterest2.png"
-import twitter from "../../assets/twitter.png"
-import facebook from "../../assets/facebook.png"
-import basketballBall from "../../assets/basketballBall.png"
+import {
+  faPinterestP,
+  faTwitter,
+  faFacebookF,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 const arraySocialNetworks = [
-  { nameIcon: "pinterest", iconImg: pinterest },
-  { nameIcon: "twitter", iconImg: twitter },
-  { nameIcon: "facebook", iconImg: facebook },
-  { nameIcon: "basketballBall", iconImg: basketballBall },
+  { nameIcon: faPinterestP },
+  { nameIcon: faTwitter },
+  { nameIcon: faFacebookF },
+  { nameIcon: faInstagram },
 ]
 
 const SocialNetworks: React.FunctionComponent = () => {
@@ -18,11 +20,7 @@ const SocialNetworks: React.FunctionComponent = () => {
       <div className={"social-networks__header"}>Follow Us</div>
       <ul className={"social-networks__icons-list"}>
         {arraySocialNetworks.map((item: any, index: number) => (
-          <SocialNetworkIcon
-            key={index}
-            iconImg={item.iconImg}
-            nameIcon={item.nameIcon}
-          />
+          <SocialNetworkIcon key={index} nameIcon={item.nameIcon} />
         ))}
       </ul>
     </div>
