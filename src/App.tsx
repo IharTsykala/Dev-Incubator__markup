@@ -33,9 +33,9 @@ import { observer, Provider } from "mobx-react"
 const App: React.FC = () => (
   <div className={"wrapper"}>
     <Header />
-    <div className={"main"}>
+    <main className={"main"}>
       <MainPage />
-    </div>
+    </main>
     <Footer />
   </div>
 )
