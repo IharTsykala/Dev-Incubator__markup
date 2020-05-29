@@ -12,10 +12,12 @@ const AboutSection: React.FunctionComponent = () => {
       </div>
       <article className={"about-section__information"}>
         <img
-          className={"about-section__photo"}
+          className={
+            "about-section__photo about-section__photo_box-shadow_around"
+          }
           src={officePlace}
           alt={"officePlace"}
-        ></img>
+        />
         <div className={"about-section__description"}>
           <h3 className={"about-section__description-header"}>
             We Actually Do amazing works

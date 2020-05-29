@@ -27,14 +27,23 @@ $footerIconHeight: 40px;
 $helloSectionHeight: 700px;
 $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
+$aboutSectionHeight: 1000px;
+$aboutSectionHeaderHeight: 300px;
 //padding
-$paddingHorizonContent: 135px;
+$paddingBaseContent: 150px;
+$paddingAboutSectionContent: 135px;
+$pbDescriptionHeader: 30px;
+$pbDescriptionText: 45px;
 $paddingSVG: 20%;
+//margin
+$marginDescription: 0 55px;
 //gap
 $socialNetworkGap: 5px;
 $iconColumnGap: 10px;
 //border-radius
 $buttonBorderRadius: 3px;
+//shadow
+$boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 * {
   margin: 0;
@@ -56,7 +65,7 @@ body {
 }
 
 .header {
-  padding: 0 $paddingHorizonContent;
+  padding: 0 $paddingBaseContent;
   background-color: $backgroundColorHeader;
   display: grid;
     .header__logo {
@@ -72,6 +81,7 @@ body {
   height: 100%;
 }
 
+//FOOTER
 .footer {
   background-color: $backgroundColorFooter;
   display: grid;
@@ -121,7 +131,7 @@ body {
 
 .main-page {
   display: grid;
-  grid-template-rows: $helloSectionHeight repeat(4, 20px);
+  grid-template-rows: $helloSectionHeight $aboutSectionHeight repeat(3, 20px);
 }
 
 .hello-section{
@@ -173,4 +183,44 @@ body {
     z-index: 2;
   }
 }
+
+.about-section {
+  background-color: $aboutSectionBackgroundColor;
+  display: grid;
+  padding: 0 $paddingAboutSectionContent;
+  grid-template-rows: $aboutSectionHeaderHeight 1fr;
+  .about-section__header {
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    .about-section__primary-header {
+      align-self: end;
+    }
+  }
+  .about-section__information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .about-section__photo {
+      justify-self: center;
+    }
+    .about-section__description {
+      margin: $marginDescription;
+      .about-section__description-header {
+        text-transform: uppercase;
+        padding-bottom: $pbDescriptionHeader;
+      }
+      .about-section__description-text {
+        padding-bottom: $pbDescriptionText;
+      }
+    }
+    .about-section__photo_box-shadow_around {
+      box-shadow: $boxShadowAroundPhoto;
+    }
+  }
+}
+
+
+
+
+
 
