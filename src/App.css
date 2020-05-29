@@ -64,6 +64,9 @@ body {
   background-color: #424648;
   display: grid;
 }
+.social-network-icon:hover {
+  background-color: #6eeee4;
+}
 .social-network-icon .social-network-icon__svg {
   display: grid;
   justify-self: center;
@@ -73,11 +76,7 @@ body {
   height: 100%;
   padding: 20%;
 }
-
-.social-network-icon:hover {
-  background-color: #6eeee4;
-}
-.social-network-icon:hover .social-network-icon__svg:hover {
+.social-network-icon .social-network-icon__svg:hover {
   color: #262b2e;
 }
 
@@ -157,6 +156,9 @@ body {
 .about-section .about-section__information .about-section__photo {
   justify-self: center;
 }
+.about-section .about-section__information .about-section__photo_box-shadow_around {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .about-section .about-section__information .about-section__description {
   margin: 0 55px;
 }
@@ -166,9 +168,6 @@ body {
 }
 .about-section .about-section__information .about-section__description .about-section__description-text {
   padding-bottom: 45px;
-}
-.about-section .about-section__information .about-section__photo_box-shadow_around {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*# sourceMappingURL=App.css.map */

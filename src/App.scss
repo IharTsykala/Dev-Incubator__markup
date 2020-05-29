@@ -111,6 +111,9 @@ body {
   width: $footerIconWidth;
   background-color: $backgroundColorFooterIcon;
   display: grid;
+    &:hover {
+    background-color: $baseMiddleColor;
+    }
   .social-network-icon__svg {
     display: grid;
     justify-self: center;
@@ -119,15 +122,18 @@ body {
     width: 100%;
     height: 100%;
     padding: $paddingSVG;
+      &:hover {
+      color:  $backgroundColorFooter;
+      }
   }
 }
 
-.social-network-icon:hover {
-  background-color: $baseMiddleColor;
-  .social-network-icon__svg:hover {
-    color:  $backgroundColorFooter;
-  }
-}
+//.social-network-icon:hover {
+//  background-color: $baseMiddleColor;
+//  .social-network-icon__svg:hover {
+//    color:  $backgroundColorFooter;
+//  }
+//}
 
 .main-page {
   display: grid;
@@ -203,6 +209,9 @@ body {
     .about-section__photo {
       justify-self: center;
     }
+    .about-section__photo_box-shadow_around {
+      box-shadow: $boxShadowAroundPhoto;
+    }
     .about-section__description {
       margin: $marginDescription;
       .about-section__description-header {
@@ -212,9 +221,6 @@ body {
       .about-section__description-text {
         padding-bottom: $pbDescriptionText;
       }
-    }
-    .about-section__photo_box-shadow_around {
-      box-shadow: $boxShadowAroundPhoto;
     }
   }
 }
