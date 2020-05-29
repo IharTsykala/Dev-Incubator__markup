@@ -211,18 +211,31 @@ body {
   display: grid;
 }
 .team-section .our-team .our-team__photo-container .popUp {
+  display: none;
+}
+.team-section .our-team .our-team__photo-container:hover .popUp {
   position: absolute;
   width: 90%;
   height: 55%;
   background-color: #6eeee4;
   border-radius: 3px;
+  display: grid;
   justify-self: center;
+  justify-items: center;
   bottom: 15px;
+  padding: 30px 40px;
 }
-.team-section .our-team .our-team__photo-container .popUp__header-span {
-  font-size: 14px;
+.team-section .our-team .our-team__photo-container:hover .popUp .popUp__header {
+  text-transform: uppercase;
+}
+.team-section .our-team .our-team__photo-container:hover .popUp .popUp__header-span {
+  font-size: 16px;
   font-weight: normal;
   font-style: italic;
+  text-transform: none;
+}
+.team-section .our-team .our-team__photo-container:hover .popUp .popUp-text {
+  overflow-y: auto;
 }
 .team-section .our-team .our-team__photo-container .our-team__photo {
   width: 100%;

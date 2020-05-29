@@ -285,18 +285,35 @@ body {
       list-style-type: none;
       display: grid;
       .popUp {
-        position: absolute;
-        width: 90%;
-        height: 55%;
-        background-color: $baseMiddleColor;
-        border-radius: $buttonBorderRadius;
-        justify-self: center;
-        bottom: 15px;
+        display: none;
       }
-      .popUp__header-span {
-        font-size: 14px;
-        font-weight: normal;
-        font-style: italic;
+      &:hover {
+        .popUp {
+          position: absolute;
+          width: 90%;
+          height: 55%;
+          background-color: $baseMiddleColor;
+          border-radius: $buttonBorderRadius;
+          display: grid;
+          justify-self: center;
+          justify-items: center;
+          bottom: 15px;
+          padding: 30px 40px;
+          //opacity: 0;
+          .popUp__header {
+            text-transform: uppercase;
+            //padding-bottom: 10px;
+          }
+          .popUp__header-span {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            text-transform: none;
+          }
+          .popUp-text {
+            overflow-y: auto;
+          }
+        }
       }
       .our-team__photo {
         width: 100%;
