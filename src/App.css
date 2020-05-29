@@ -8,7 +8,6 @@
   text-transform: uppercase;
   display: grid;
   align-items: end;
-  grid-template-rows: 180px 1fr;
 }
 
 .works-section .our-works, .about-section .about-section__information {
@@ -157,6 +156,9 @@ body {
   background-color: #f8fafa;
   padding: 0 135px;
 }
+.about-section .about-section__header {
+  grid-template-rows: 180px 1fr;
+}
 .about-section .about-section__information {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -175,6 +177,9 @@ body {
   padding-bottom: 45px;
 }
 
+.works-section .works-section__header {
+  grid-template-rows: 180px 1fr;
+}
 .works-section .our-works {
   grid-template-columns: repeat(3, 375px);
   grid-template-rows: repeat(2, 360px);

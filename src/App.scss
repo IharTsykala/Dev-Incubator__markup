@@ -57,7 +57,7 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   text-transform: uppercase;
   display: grid;
   align-items: end;
-  grid-template-rows: 180px 1fr;
+  //grid-template-rows: 180px 1fr;
 }
 
 %base-sections-content {
@@ -212,6 +212,7 @@ body {
   padding: $paddingAboutSectionContent;
   .about-section__header {
     @extend %base-sections-header;
+    grid-template-rows: 180px 1fr;
   }
   .about-section__information {
     @extend %base-sections-content;
@@ -244,6 +245,7 @@ body {
   //padding: $paddingBaseContent;
   .works-section__header {
     @extend %base-sections-header;
+    grid-template-rows: 180px 1fr;
   }
   .our-works {
     @extend %base-sections-content;
