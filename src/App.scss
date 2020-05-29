@@ -90,6 +90,7 @@ body {
   grid-template-rows: $headerHeight 1fr $footerHeight;
 }
 
+//HEADER
 .header {
   padding: $paddingBaseContent;
   background-color: $backgroundColorHeader;

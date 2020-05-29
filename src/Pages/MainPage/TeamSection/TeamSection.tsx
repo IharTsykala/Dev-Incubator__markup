@@ -28,7 +28,7 @@ const TeamSection: React.FunctionComponent = () => {
           Lorem ipsum dolor sit amet event landing template
         </h5>
       </div>
-      <Photos arrayOfWorks={arrayOfWorks} className={"our-team"} />
+      <Photos arrayOfWorks={arrayOfWorks} className={"our-team"} isPopUp={true} />
     </section>
   )
 }

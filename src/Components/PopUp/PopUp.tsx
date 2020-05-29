@@ -4,7 +4,7 @@ import React from "react"
 //   dispatch: any,
 // }
 
-const TeamSection: React.FunctionComponent = () => {
+const PopUp: React.FunctionComponent = () => {
   return <div className={"popUp"}></div>
 }
 
@@ -12,4 +12,4 @@ const TeamSection: React.FunctionComponent = () => {
 //   searchStringState: state.pagination.searchString,
 // })
 
-export default TeamSection
+export default PopUp
