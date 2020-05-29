@@ -29,9 +29,10 @@ $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
 $aboutSectionHeight: 1000px;
 $aboutSectionHeaderHeight: 300px;
+$teamSectionHeight: 1165px;
 //padding
-$paddingBaseContent: 150px;
-$paddingAboutSectionContent: 135px;
+$paddingBaseContent: 0 150px;
+$paddingAboutSectionContent: 0 135px;
 $pbDescriptionHeader: 30px;
 $pbDescriptionText: 45px;
 $paddingSVG: 20%;
@@ -65,7 +66,7 @@ body {
 }
 
 .header {
-  padding: 0 $paddingBaseContent;
+  padding: $paddingBaseContent;
   background-color: $backgroundColorHeader;
   display: grid;
     .header__logo {
@@ -128,16 +129,10 @@ body {
   }
 }
 
-//.social-network-icon:hover {
-//  background-color: $baseMiddleColor;
-//  .social-network-icon__svg:hover {
-//    color:  $backgroundColorFooter;
-//  }
-//}
-
+//MAIN
 .main-page {
   display: grid;
-  grid-template-rows: $helloSectionHeight $aboutSectionHeight repeat(3, 20px);
+  grid-template-rows: $helloSectionHeight $aboutSectionHeight $teamSectionHeight repeat(2, 20px);
 }
 
 .hello-section{
@@ -193,7 +188,7 @@ body {
 .about-section {
   background-color: $aboutSectionBackgroundColor;
   display: grid;
-  padding: 0 $paddingAboutSectionContent;
+  padding: $paddingAboutSectionContent;
   grid-template-rows: $aboutSectionHeaderHeight 1fr;
   .about-section__header {
     text-align: center;
@@ -223,6 +218,10 @@ body {
       }
     }
   }
+}
+
+.worksSection {
+  padding: $paddingBaseContent;
 }
 
 

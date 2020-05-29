@@ -82,7 +82,7 @@ body {
 
 .main-page {
   display: grid;
-  grid-template-rows: 700px 1000px repeat(3, 20px);
+  grid-template-rows: 700px 1000px 1165px repeat(2, 20px);
 }
 
 .hello-section {
@@ -168,6 +168,10 @@ body {
 }
 .about-section .about-section__information .about-section__description .about-section__description-text {
   padding-bottom: 45px;
+}
+
+.worksSection {
+  padding: 0 150px;
 }
 
 /*# sourceMappingURL=App.css.map */
