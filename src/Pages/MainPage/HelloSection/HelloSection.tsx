@@ -10,10 +10,10 @@ const HelloSection: React.FunctionComponent = () => {
           "hello-section__header hello-section__header_text-shadow_bottom"
         }
       >
-        Say Hello to{" "}
+        Say Hello to
         <mark className={"hello-section__header_mark_green"}>SHOPNO!</mark>
         <br />
-        <mark className={"hello-section__header_mark_green"}>Agency</mark>{" "}
+        <mark className={"hello-section__header_mark_green"}>Agency</mark>
         CORPORATE SHOPNO Theme
       </h2>
       <button className={"contact-us-button"}>Contact Us</button>
