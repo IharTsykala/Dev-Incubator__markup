@@ -21,15 +21,15 @@ const Photos: React.FunctionComponent<OurWorksProps> = ({
     <ul className={className}>
       {arrayOfWorks.map((item: WorksInterface, index: number) => {
         return (
-          <>
-            {isPopUp && <PopUp />}
+          <li className={`${className}__photo-container`}>
+            {isPopUp && <PopUp name={item.namePhoto} />}
             <img
               className={`${className}__photo`}
               src={item.photoIMG}
               alt={item.namePhoto}
               key={index}
             />
-          </>
+          </li>
         )
       })}
     </ul>

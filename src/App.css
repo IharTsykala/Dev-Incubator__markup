@@ -186,7 +186,10 @@ body {
   grid-template-rows: repeat(2, 360px);
   justify-self: center;
 }
-.works-section .our-works .our-works__photo {
+.works-section .our-works .our-works__photo-container {
+  list-style-type: none;
+}
+.works-section .our-works .our-works__photo-container .our-works__photo {
   width: 100%;
   height: 100%;
 }
@@ -202,7 +205,26 @@ body {
   grid-template-rows: repeat(2, 440px);
   justify-self: center;
 }
-.team-section .our-team .our-team__photo {
+.team-section .our-team .our-team__photo-container {
+  position: relative;
+  list-style-type: none;
+  display: grid;
+}
+.team-section .our-team .our-team__photo-container .popUp {
+  position: absolute;
+  width: 90%;
+  height: 55%;
+  background-color: #6eeee4;
+  border-radius: 3px;
+  justify-self: center;
+  bottom: 15px;
+}
+.team-section .our-team .our-team__photo-container .popUp__header-span {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+.team-section .our-team .our-team__photo-container .our-team__photo {
   width: 100%;
   height: 100%;
 }
