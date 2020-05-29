@@ -1,10 +1,6 @@
 import React from "react"
 import officePlace from "../../../assets/officePlace.png"
 
-// type SearchProps = {
-//   dispatch: any,
-// }
-
 const AboutSection: React.FunctionComponent = () => {
   return (
     <section className={"about-section"}>
@@ -48,9 +44,5 @@ const AboutSection: React.FunctionComponent = () => {
     </section>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default AboutSection
