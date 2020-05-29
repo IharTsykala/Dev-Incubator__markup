@@ -28,7 +28,7 @@ $helloSectionHeight: 700px;
 $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
 $aboutSectionHeight: 1000px;
-$aboutSectionHeaderHeight: 300px;
+$baseSectionHeaderHeight: 200px;
 $teamSectionHeight: 1165px;
 //padding
 $paddingBaseContent: 0 150px;
@@ -46,6 +46,27 @@ $buttonBorderRadius: 3px;
 //shadow
 $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+//EXTEND
+%base-sections {
+  display: grid;
+  grid-template-rows: $baseSectionHeaderHeight 1fr;
+}
+
+%base-sections-header {
+  text-align: center;
+  text-transform: uppercase;
+  display: grid;
+  align-items: end;
+  grid-template-rows: 180px 1fr;
+}
+
+%base-sections-content {
+  display: grid;
+  //justify-self: center;
+  align-content: center;
+}
+
+//BODY
 * {
   margin: 0;
   padding: 0;
@@ -186,23 +207,21 @@ body {
 }
 
 .about-section {
+  @extend %base-sections;
   background-color: $aboutSectionBackgroundColor;
-  display: grid;
   padding: $paddingAboutSectionContent;
-  grid-template-rows: $aboutSectionHeaderHeight 1fr;
   .about-section__header {
-    text-align: center;
-    text-transform: uppercase;
-    display: grid;
-    .about-section__primary-header {
-      align-self: end;
-    }
+    @extend %base-sections-header;
   }
   .about-section__information {
-    display: grid;
+    @extend %base-sections-content;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    //align-content: center;
     .about-section__photo {
-      justify-self: center;
+      //width: 100%;
+      //height: 100%;
+      //justify-self: center;
     }
     .about-section__photo_box-shadow_around {
       box-shadow: $boxShadowAroundPhoto;
@@ -220,9 +239,26 @@ body {
   }
 }
 
-.worksSection {
-  padding: $paddingBaseContent;
+.works-section {
+  @extend %base-sections;
+  //padding: $paddingBaseContent;
+  .works-section__header {
+    @extend %base-sections-header;
+  }
+  .our-works {
+    @extend %base-sections-content;
+    grid-template-columns: repeat(3, 375px);
+    grid-template-rows: repeat(2, 360px);
+    justify-self: center;
+    gap: 15px;
+    .our-works__photo {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
+
+
 
 
 
