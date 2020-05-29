@@ -7,15 +7,19 @@ interface WorksInterface {
 
 type OurWorksProps = {
   arrayOfWorks: [WorksInterface] | any,
+  className: string,
 }
 
-const OurWorks: React.FunctionComponent<OurWorksProps> = ({ arrayOfWorks }) => {
+const Photos: React.FunctionComponent<OurWorksProps> = ({
+  arrayOfWorks,
+  className,
+}) => {
   return (
-    <ul className={"our-works"}>
+    <ul className={className}>
       {arrayOfWorks.map((item: WorksInterface, index: number) => {
         return (
           <img
-            className={"our-works__photo"}
+            className={`${className}__photo`}
             src={item.photoIMG}
             alt={item.namePhoto}
             key={index}
@@ -26,4 +30,4 @@ const OurWorks: React.FunctionComponent<OurWorksProps> = ({ arrayOfWorks }) => {
   )
 }
 
-export default OurWorks
+export default Photos

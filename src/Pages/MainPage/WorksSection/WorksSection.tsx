@@ -1,5 +1,5 @@
 import React from "react"
-import OurWorks from "../../../Components/OurWorks/OurWorks"
+import Photos from "../../../Components/Photos/Photos"
 import cake from "../../../assets/cake.png"
 import businessCards from "../../../assets/businessCards.png"
 import bottles from "../../../assets/bottles.png"
@@ -25,7 +25,7 @@ const WorksSection: React.FunctionComponent = () => {
           Lorem ipsum dolor sit amet event landing template
         </h5>
       </div>
-      <OurWorks arrayOfWorks={arrayOfWorks} />
+      <Photos arrayOfWorks={arrayOfWorks} className={"our-works"} />
     </section>
   )
 }

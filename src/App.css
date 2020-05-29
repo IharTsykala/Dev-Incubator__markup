@@ -1,18 +1,19 @@
-.works-section, .about-section {
+.team-section, .works-section, .about-section {
   display: grid;
   grid-template-rows: 200px 1fr;
 }
 
-.works-section .works-section__header, .about-section .about-section__header {
+.team-section .team-section__header, .works-section .works-section__header, .about-section .about-section__header {
   text-align: center;
   text-transform: uppercase;
   display: grid;
   align-items: end;
 }
 
-.works-section .our-works, .about-section .about-section__information {
+.team-section .our-team, .works-section .our-works, .about-section .about-section__information {
   display: grid;
   align-content: center;
+  gap: 15px;
 }
 
 * {
@@ -99,7 +100,7 @@ body {
 
 .main-page {
   display: grid;
-  grid-template-rows: 700px 1000px 1165px repeat(2, 20px);
+  grid-template-rows: 700px 1000px 1165px 1360px 20px;
 }
 
 .hello-section {
@@ -184,9 +185,24 @@ body {
   grid-template-columns: repeat(3, 375px);
   grid-template-rows: repeat(2, 360px);
   justify-self: center;
-  gap: 15px;
 }
 .works-section .our-works .our-works__photo {
+  width: 100%;
+  height: 100%;
+}
+
+.team-section {
+  grid-template-rows: 160px 1fr;
+}
+.team-section .team-section__header {
+  grid-template-rows: 140px 1fr;
+}
+.team-section .our-team {
+  grid-template-columns: repeat(3, 365px);
+  grid-template-rows: repeat(2, 440px);
+  justify-self: center;
+}
+.team-section .our-team .our-team__photo {
   width: 100%;
   height: 100%;
 }
