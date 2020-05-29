@@ -16,10 +16,6 @@ const arrayOfWorks = [
   { namePhoto: "healingTea", photoIMG: healingTea },
 ]
 
-// type SearchProps = {
-//   dispatch: any,
-// }
-
 const WorksSection: React.FunctionComponent = () => {
   return (
     <section className={"works-section"}>
@@ -33,9 +29,5 @@ const WorksSection: React.FunctionComponent = () => {
     </section>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default WorksSection
