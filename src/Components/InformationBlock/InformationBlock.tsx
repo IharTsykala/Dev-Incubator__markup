@@ -31,7 +31,7 @@ const InformationBlock: React.FunctionComponent<InformationBlockProps> = ({
         {name}
         <span className={`${className}__header-span`}> / UI Designer</span>
       </h3>
-      <p className={`${className}-text`}>
+      <p className={`${className}__text`}>
         Lorem Ipsum is not simply is an action designer random text It has roots
         in a piece.
       </p>

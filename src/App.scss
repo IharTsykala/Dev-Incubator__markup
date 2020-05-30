@@ -69,6 +69,10 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   align-content: center;
   gap: 15px
 }
+%base-render-icon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
 //BODY
 * {
@@ -127,8 +131,7 @@ body {
     text-transform: uppercase;
   }
   .social-networks__icons-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @extend %base-render-icon;
     column-gap: $iconColumnGap;
   }
 }
@@ -310,8 +313,14 @@ body {
             font-style: italic;
             text-transform: none;
           }
-          .information-block-text {
+          .information-block__text {
             overflow-y: auto;
+          }
+          .information-block__icons-list {
+            @extend %base-render-icon;
+            .information-block-icon__svg:hover {
+              color: $baseLightColor;
+            }
           }
         }
       }
