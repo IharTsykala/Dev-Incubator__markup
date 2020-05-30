@@ -1,5 +1,5 @@
 import React from "react"
-import PopUp from "../PopUp/PopUp"
+import InformationBlock from "../InformationBlock/InformationBlock"
 
 interface WorksInterface {
   namePhoto: string;
@@ -9,20 +9,25 @@ interface WorksInterface {
 type OurWorksProps = {
   arrayOfWorks: [WorksInterface] | any,
   className: string,
-  isPopUp?: boolean,
+  isInformationBlock?: boolean,
 }
 
 const Photos: React.FunctionComponent<OurWorksProps> = ({
   arrayOfWorks,
   className,
-  isPopUp,
+  isInformationBlock,
 }) => {
   return (
     <ul className={className}>
       {arrayOfWorks.map((item: WorksInterface, index: number) => {
         return (
           <li className={`${className}__photo-container`}>
-            {isPopUp && <PopUp name={item.namePhoto} />}
+            {isInformationBlock && (
+              <InformationBlock
+              // nameProps={item.namePhoto}
+              // classNameProps={className}
+              />
+            )}
             <img
               className={`${className}__photo`}
               src={item.photoIMG}

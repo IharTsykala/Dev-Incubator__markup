@@ -4,14 +4,19 @@ import { IconDefinition } from "@fortawesome/fontawesome-common-types"
 
 type SocialNetworkIconProps = {
   nameIcon: IconDefinition,
+  classNameProps: string,
 }
 
 const SocialNetworkIcon: React.FunctionComponent<SocialNetworkIconProps> = ({
   nameIcon,
+  classNameProps,
 }) => {
   return (
-    <div className={"social-network-icon"}>
-      <FontAwesomeIcon icon={nameIcon} className={"social-network-icon__svg"} />
+    <div className={`${classNameProps}-icon`}>
+      <FontAwesomeIcon
+        icon={nameIcon}
+        className={`${classNameProps}-icon__svg`}
+      />
     </div>
   )
 }

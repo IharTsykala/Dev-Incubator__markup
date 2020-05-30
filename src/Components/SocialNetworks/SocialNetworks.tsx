@@ -1,29 +1,30 @@
 import React from "react"
-import SocialNetworkIcon from "../SocialNetworkIcon/SocialNetworkIcon"
-import {
-  faPinterestP,
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons"
+import SocialNetworkIcon from "./SocialNetworkIcon/SocialNetworkIcon"
 
-const arraySocialNetworks = [
-  { nameIcon: faPinterestP },
-  { nameIcon: faTwitter },
-  { nameIcon: faFacebookF },
-  { nameIcon: faInstagram },
-]
+interface SocialNetwork {
+  nameIcon: string;
+}
 
-const SocialNetworks: React.FunctionComponent = () => {
+type SocialNetworksProps = {
+  arraySocialNetworks: [SocialNetwork] | any,
+  classNameProps?: string,
+}
+
+const SocialNetworks: React.FunctionComponent<SocialNetworksProps> = ({
+  arraySocialNetworks,
+  classNameProps,
+}) => {
+  const className = classNameProps || "social-networks"
   return (
-    <div className={"social-networks"}>
-      <div className={"social-networks__header"}>Follow Us</div>
-      <ul className={"social-networks__icons-list"}>
-        {arraySocialNetworks.map((item: any, index: number) => (
-          <SocialNetworkIcon key={index} nameIcon={item.nameIcon} />
-        ))}
-      </ul>
-    </div>
+    <ul className={`${className}__icons-list`}>
+      {arraySocialNetworks.map((item: any, index: number) => (
+        <SocialNetworkIcon
+          key={index}
+          nameIcon={item.nameIcon}
+          classNameProps={className}
+        />
+      ))}
+    </ul>
   )
 }
 
