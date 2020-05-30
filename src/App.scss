@@ -19,7 +19,7 @@ $logoHeaderWidth: 130px;
 $footerIconWidth: 45px;
 $glassOnBeerdekelWidth: 150px;
 $contactUsButtonWidth: 230px;
-$FormButtonWidth: 240px;
+$formButtonWidth: 240px;
 $dataSectionFormWidth: 610px;
 $dataSectionOurContactsWidth: 500px;
 //height
@@ -342,6 +342,17 @@ body {
   background-color: $dataSectionFormBackground;
   opacity: 0.8;
   align-self: center;
+  padding: 0 30px;
+  display: grid;
+}
+
+%base-form-private-data__input {
+  background-color: $dataSectionFormBackground;
+  border: 0px;
+  border-bottom: 1px solid $baseLightColor;
+  &::placeholder {
+    color: $baseLightColor;
+  }
 }
 
 .data-section {
@@ -351,11 +362,34 @@ body {
   padding: $paddingBaseContent;
   column-gap: 10px;
   .form-private-data {
-    @extend %data-section-blocks
+    @extend %data-section-blocks;
+    .form-private-data__input {
+      @extend %base-form-private-data__input;
+    }
+    .form-private-data__textarea {
+      @extend %base-form-private-data__input;
+    }
+    .form-private-data__button {
+      width: $formButtonWidth;
+      height: 50%;
+      align-self: center;
+      border-radius: $buttonBorderRadius;
+      background-color: $baseMiddleColor;
+      text-transform: uppercase;
+      border: 0px;
+    }
   }
   .our-contacts{
     @extend %data-section-blocks;
     width: $dataSectionOurContactsWidth;
+    grid-template-rows: 30% 15% 1fr;
+    padding: 20px;
+    color: $baseLightColor;
+    .our-contacts__map {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+    }
   }
 
 }

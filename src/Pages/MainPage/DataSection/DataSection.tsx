@@ -11,23 +11,23 @@ const DataSection: React.FunctionComponent = () => {
         <input
           className={"form-private-data__input"}
           type="text"
-          placeholder="Name"
+          placeholder="Name*"
           required={true}
         />
         <input
           className={"form-private-data__input"}
           type="text"
-          placeholder="Subject"
+          placeholder="Subject*"
           required={true}
         />
         <input
           className={"form-private-data__input"}
           type="text"
-          placeholder="E-mail"
+          placeholder="E-mail*"
           required={true}
         />
         <textarea
-          className={"form-private-data__input"}
+          className={"form-private-data__textarea"}
           cols={30}
           rows={5}
           placeholder="Message"
@@ -36,16 +36,16 @@ const DataSection: React.FunctionComponent = () => {
       </form>
       <article className={"our-contacts"}>
         <div className={"our-contacts__address-phone"}>
-          <p className={"our-contacts__text"}></p>
-          <p className={"our-contacts__text"}></p>
-          <p className={"our-contacts__text"}></p>
-          <p className={"our-contacts__text"}></p>
+          <p className={"our-contacts__text"}>Address Line1</p>
+          <p className={"our-contacts__text"}>Address Line1</p>
+          <p className={"our-contacts__text"}>Phone: +548 945645</p>
+          <p className={"our-contacts__text"}>Fax: +456456 54546</p>
         </div>
         <div className={"our-contacts__internet"}>
-          <p className={"our-contacts__text"}></p>
-          <p className={"our-contacts__text"}></p>
+          <p className={"our-contacts__text"}>Web: www.designagency.net</p>
+          <p className={"our-contacts__text"}>E-mail: info@designagency.net</p>
         </div>
-        <img className={"our-contacts__internet"} />
+        <img className={"our-contacts__map"} alt={"map"} />
       </article>
     </section>
   )
