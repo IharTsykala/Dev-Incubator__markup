@@ -32,6 +32,7 @@ $baseSectionHeaderHeight: 200px;
 $workSectionHeight: 1165px;
 $teamSectionHeight: 1360px;
 $workSectionHeaderHeight: 160px;
+$dataSectionHeight: 700px;
 
 //padding
 $paddingBaseContent: 0 150px;
@@ -161,7 +162,7 @@ body {
 //MAIN
 .main-page {
   display: grid;
-  grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight 20px;
+  grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
 }
 
 .hello-section{
@@ -330,6 +331,10 @@ body {
       }
     }
   }
+}
+
+.data-section {
+ background-image:url('./assets/backgroundWithWinter.png') ;
 }
 
 

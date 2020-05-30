@@ -103,7 +103,7 @@ body {
 
 .main-page {
   display: grid;
-  grid-template-rows: 700px 1000px 1165px 1360px 20px;
+  grid-template-rows: 700px 1000px 1165px 1360px 700px;
 }
 
 .hello-section {
@@ -246,6 +246,10 @@ body {
 .team-section .team-section-photos .team-section-photos__photo-container .team-section-photos__photo {
   width: 100%;
   height: 100%;
+}
+
+.data-section {
+  background-image: url("./assets/backgroundWithWinter.png");
 }
 
 /*# sourceMappingURL=App.css.map */
