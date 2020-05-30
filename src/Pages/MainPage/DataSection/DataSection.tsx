@@ -8,11 +8,31 @@ const DataSection: React.FunctionComponent = () => {
   return (
     <section className={"data-section"}>
       <form className={"form-private-data"}>
-        <input className={"form-private-data__input"} />
-        <input className={"form-private-data__input"} />
-        <input className={"form-private-data__input"} />
-        <input className={"form-private-data__input"} />
-        <button className={"form-private-data__button"} />
+        <input
+          className={"form-private-data__input"}
+          type="text"
+          placeholder="Name"
+          required={true}
+        />
+        <input
+          className={"form-private-data__input"}
+          type="text"
+          placeholder="Subject"
+          required={true}
+        />
+        <input
+          className={"form-private-data__input"}
+          type="text"
+          placeholder="E-mail"
+          required={true}
+        />
+        <textarea
+          className={"form-private-data__input"}
+          cols={30}
+          rows={5}
+          placeholder="Message"
+        />
+        <button className={"form-private-data__button"}> Send Message</button>
       </form>
       <article className={"our-contacts"}>
         <div className={"our-contacts__address-phone"}>

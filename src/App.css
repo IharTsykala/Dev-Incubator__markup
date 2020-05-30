@@ -253,6 +253,7 @@ body {
   width: 610px;
   background-color: #485862;
   opacity: 0.8;
+  align-self: center;
 }
 
 .data-section {
