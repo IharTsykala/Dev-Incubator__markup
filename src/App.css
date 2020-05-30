@@ -248,8 +248,22 @@ body {
   height: 100%;
 }
 
+.data-section .our-contacts, .data-section .form-private-data {
+  height: 460px;
+  width: 610px;
+  background-color: #485862;
+  opacity: 0.8;
+}
+
 .data-section {
   background-image: url("./assets/backgroundWithWinter.png");
+  display: grid;
+  grid-template-columns: 625px 1fr;
+  padding: 0 150px;
+  column-gap: 10px;
+}
+.data-section .our-contacts {
+  width: 500px;
 }
 
 /*# sourceMappingURL=App.css.map */

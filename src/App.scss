@@ -5,6 +5,7 @@ $backgroundColorHeader: #eff0f2;
 $backgroundColorFooter: #262b2e;
 $backgroundColorFooterIcon: #424648;
 $aboutSectionBackgroundColor: #f8fafa;
+$dataSectionFormBackground: #485862;
 //color
 $baseLightColor: #bbb8b9;
 $baseMiddleColor: #6eeee4;
@@ -19,6 +20,8 @@ $footerIconWidth: 45px;
 $glassOnBeerdekelWidth: 150px;
 $contactUsButtonWidth: 230px;
 $FormButtonWidth: 240px;
+$dataSectionFormWidth: 610px;
+$dataSectionOurContactsWidth: 500px;
 //height
 $headerHeight: 110px;
 $footerHeight: 320px;
@@ -33,7 +36,7 @@ $workSectionHeight: 1165px;
 $teamSectionHeight: 1360px;
 $workSectionHeaderHeight: 160px;
 $dataSectionHeight: 700px;
-
+$dataSectionFormHeight: 460px;
 //padding
 $paddingBaseContent: 0 150px;
 $paddingAboutSectionContent: 0 135px;
@@ -333,8 +336,27 @@ body {
   }
 }
 
+%data-section-blocks {
+  height: $dataSectionFormHeight;
+  width: $dataSectionFormWidth;
+  background-color: $dataSectionFormBackground;
+  opacity: 0.8;
+}
+
 .data-section {
- background-image:url('./assets/backgroundWithWinter.png') ;
+  background-image:url('./assets/backgroundWithWinter.png');
+  display: grid;
+  grid-template-columns: 625px 1fr;
+  padding: $paddingBaseContent;
+  column-gap: 10px;
+  .form-private-data {
+    @extend %data-section-blocks
+  }
+  .our-contacts{
+    @extend %data-section-blocks;
+    width: $dataSectionOurContactsWidth;
+  }
+
 }
 
 
