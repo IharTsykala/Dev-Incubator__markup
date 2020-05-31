@@ -21,7 +21,7 @@ const Photos: React.FunctionComponent<OurWorksProps> = ({
     <ul className={className}>
       {arrayOfWorks.map((item: WorksInterface, index: number) => {
         return (
-          <li className={`${className}__photo-container`}>
+          <li className={`${className}__photo-container`} key={index}>
             {isInformationBlock && (
               <InformationBlock
               // nameProps={item.namePhoto}
@@ -32,7 +32,6 @@ const Photos: React.FunctionComponent<OurWorksProps> = ({
               className={`${className}__photo`}
               src={item.photoIMG}
               alt={item.namePhoto}
-              key={index}
             />
           </li>
         )

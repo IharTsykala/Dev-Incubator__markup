@@ -1,10 +1,18 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import MyMapComponent from "./Map/Map"
 
 // type SearchProps = {
 //   dispatch: any,
 // }
 
 const DataSection: React.FunctionComponent = () => {
+  const [api, setApi] = useState()
+  useEffect(() => {
+    const src =
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w&callback=initMap"
+    setApi(src)
+  }, [])
+
   return (
     <section className={"data-section"}>
       <form className={"form-private-data"}>
@@ -45,7 +53,7 @@ const DataSection: React.FunctionComponent = () => {
           <p className={"our-contacts__text"}>Web: www.designagency.net</p>
           <p className={"our-contacts__text"}>E-mail: info@designagency.net</p>
         </div>
-        <img className={"our-contacts__map"} alt={"map"} />
+        <MyMapComponent isMarkerShown={true} />
       </article>
     </section>
   )
@@ -56,3 +64,5 @@ const DataSection: React.FunctionComponent = () => {
 // })
 
 export default DataSection
+
+//AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w
