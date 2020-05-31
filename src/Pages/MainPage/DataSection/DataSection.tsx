@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react"
-import MyMapComponent from "./Map/Map"
+import React from "react"
+import Map from "./Map/Map"
+import { mapCenter } from "../../../Redux/InterfacesEntity/mapCenter.interface"
 
-// type SearchProps = {
-//   dispatch: any,
-// }
+const center = {
+  lat: 53.901634,
+  lng: 27.545265,
+}
 
-const DataSection: React.FunctionComponent = () => {
-  const [api, setApi] = useState()
-  useEffect(() => {
-    const src =
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w&callback=initMap"
-    setApi(src)
-  }, [])
+type DataSectionProps = {
+  mapCenter: mapCenter,
+}
 
+const DataSection: React.FunctionComponent<DataSectionProps> = ({
+  mapCenter,
+}) => {
   return (
     <section className={"data-section"}>
       <form className={"form-private-data"}>
@@ -53,16 +54,21 @@ const DataSection: React.FunctionComponent = () => {
           <p className={"our-contacts__text"}>Web: www.designagency.net</p>
           <p className={"our-contacts__text"}>E-mail: info@designagency.net</p>
         </div>
-        <MyMapComponent isMarkerShown={true} />
+        <div className={"our-contacts__text"}>
+          <Map
+            mapCenter={mapCenter}
+            googleMapsApiKey={"AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w"}
+          />
+        </div>
       </article>
     </section>
   )
 }
 
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
+const mapStateToProps = (state: any) => ({
+  mapCenter: state.mapCenter.mapCenter,
+})
 
 export default DataSection
 
-//AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w
+//AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w  -- Key Map API

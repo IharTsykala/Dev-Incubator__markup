@@ -1,5 +1,5 @@
 import { Action } from "../../interfacesAction/action.interface"
-import { CardItem } from "../../InterfacesEntity/CardItem.interface"
+import { CardItem } from "../../InterfacesEntity/mapCenter.interface"
 
 export const ActionTypes = {
   GET_LIST_EVENTS: "[Events] Get list events",

@@ -1,10 +1,6 @@
 import { combineReducers } from "redux"
-import { eventsReducer } from "./store/events/events.reduser"
-import { currentSportReducer } from "./store/currentSpotr/currentSpotr.reduser"
-import {  periodReducer } from "./store/period/period.reduser"
+import { mapCenterReducer } from "./store/map/map.reduser"
 
 export default combineReducers({
-  listEvents: eventsReducer,
-  currentSport: currentSportReducer,
-  period: periodReducer,
+  mapCenter: mapCenterReducer,
 })
