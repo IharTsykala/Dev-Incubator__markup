@@ -181,6 +181,24 @@ body {
   padding-bottom: 45px;
 }
 
+.works-section {
+  position: relative;
+}
+.works-section .modal-window {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(38, 43, 46, 0.8);
+  display: grid;
+}
+.works-section .modal-window .modal-window__photo {
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
+}
 .works-section .works-section__header {
   grid-template-rows: 180px 1fr;
 }

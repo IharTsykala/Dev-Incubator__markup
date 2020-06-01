@@ -5,10 +5,6 @@ import WorksSection from "./WorksSection/WorksSection"
 import TeamSection from "./TeamSection/TeamSection"
 import DataSection from "./DataSection/DataSection"
 
-// type SearchProps = {
-//   dispatch: any,
-// }
-
 const MainPage: React.FunctionComponent = () => {
   return (
     <div className={"main-page"}>
@@ -20,9 +16,5 @@ const MainPage: React.FunctionComponent = () => {
     </div>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default MainPage
