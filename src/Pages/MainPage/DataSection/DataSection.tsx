@@ -1,4 +1,5 @@
 import React from "react"
+import { connect } from "react-redux"
 import Map from "./Map/Map"
 import { mapCenter } from "../../../Redux/InterfacesEntity/mapCenter.interface"
 
@@ -69,6 +70,6 @@ const mapStateToProps = (state: any) => ({
   mapCenter: state.mapCenter.mapCenter,
 })
 
-export default DataSection
+export default connect(mapStateToProps)(DataSection)
 
 //AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w  -- Key Map API

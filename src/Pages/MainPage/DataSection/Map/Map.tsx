@@ -1,10 +1,6 @@
 import React from "react"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-
-interface center {
-  lat: number;
-  lng: number;
-}
+import { mapCenter } from "../../../../Redux/InterfacesEntity/mapCenter.interface"
 
 const containerStyle = {
   width: "100%",
@@ -14,18 +10,22 @@ const containerStyle = {
 const zoom = 15
 
 type MapProps = {
-  center: center,
+  mapCenter: mapCenter,
   googleMapsApiKey: string,
 }
 
 const Map: React.FunctionComponent<MapProps> = ({
-  center,
+  mapCenter,
   googleMapsApiKey,
 }) => {
   return (
     <LoadScript googleMapsApiKey={googleMapsApiKey}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
-        <Marker position={center} />
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={mapCenter}
+        zoom={zoom}
+      >
+        <Marker position={mapCenter} />
       </GoogleMap>
     </LoadScript>
   )

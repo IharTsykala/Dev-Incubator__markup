@@ -9,25 +9,20 @@ import { composeWithDevTools } from "redux-devtools-extension"
 import rootReducer from "./Redux/index"
 
 const store = createStore(
-  rootReducer,
-  composeWithDevTools({ trace: true, traceLimit: 25 })
-  )
+  rootReducer
+  // composeWithDevTools({ trace: true, traceLimit: 25 })
 )
 
-// const store = observable({
-//   example: 0,
-// })
-
-// sagaMiddleware.run(eventsSaga)
-
 const App: React.FC = () => (
-  <div className={"wrapper"}>
-    <Header />
-    <main className={"main"}>
-      <MainPage />
-    </main>
-    <Footer />
-  </div>
+  <Provider store={store}>
+    <div className={"wrapper"}>
+      <Header />
+      <main className={"main"}>
+        <MainPage />
+      </main>
+      <Footer />
+    </div>
+  </Provider>
 )
 
 export default App

@@ -1,5 +1,3 @@
-// import { mapCenter } from "../../InterfacesEntity/mapCenter.interface"
-import { Action } from "../../interfacesAction/action.interface"
 import { mapCenter } from "../../InterfacesEntity/mapCenter.interface"
 
 export interface State {
@@ -13,12 +11,4 @@ const initialState: State = {
   },
 }
 
-export const mapCenterReducer = (
-  state: State = initialState,
-  action: Action<[]>
-) => {
-  switch (action.type) {
-  default:
-    return state
-  }
-}
+export const mapCenterReducer = (state: State = initialState) => state
