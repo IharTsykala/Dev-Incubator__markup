@@ -36,12 +36,14 @@ const arrayOfTeam = [
 export interface State {
   listWorksPhoto: photoInterface[];
   listTeamPhoto: photoInterface[];
+  currentPhoto: photoInterface | null;
   stateModal: boolean;
 }
 
 const initialState: State = {
   listWorksPhoto: arrayOfWorks,
   listTeamPhoto: arrayOfTeam,
+  currentPhoto: null,
   stateModal: false,
 }
 export const photoReducer = (
@@ -49,6 +51,11 @@ export const photoReducer = (
   action: Action<boolean>
 ) => {
   switch (action.type) {
+  case ActionTypes.SET_CURRENT_PHOTO:
+    return {
+      ...state,
+      currentPhoto: action.payload,
+    }
   case ActionTypes.SET_STATE_MODAL_WINDOW:
     return {
       ...state,

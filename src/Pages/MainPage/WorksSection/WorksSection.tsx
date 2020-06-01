@@ -5,10 +5,12 @@ import { photoInterface } from "../../../Redux/InterfacesEntity/photo.interface"
 
 type SearchProps = {
   listWorksPhoto: photoInterface[],
+  dispatch: any,
 }
 
 const WorksSection: React.FunctionComponent<SearchProps> = ({
   listWorksPhoto,
+  dispatch,
 }) => {
   return (
     <section className={"works-section"}>
@@ -18,7 +20,11 @@ const WorksSection: React.FunctionComponent<SearchProps> = ({
           Lorem ipsum dolor sit amet event landing template
         </h5>
       </div>
-      <Photos arrayPhotos={listWorksPhoto} className={"our-works"} />
+      <Photos
+        arrayPhotos={listWorksPhoto}
+        className={"our-works"}
+        dispatch={dispatch}
+      />
     </section>
   )
 }
