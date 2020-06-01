@@ -1,25 +1,15 @@
 import React from "react"
 import Photos from "../../../Components/Photos/Photos"
-import womanWithGlasses from "../../../assets/womanWithGlasses.png"
-import manWithoutBeard from "../../../assets/manWithoutBeard.png"
-import manWithSmallBeard from "../../../assets/manWithSmallBeard.png"
-import manWithBigBeard from "../../../assets/manWithBigBeard.png"
-import womanWithoutGlasses from "../../../assets/womanWithoutGlasses.png"
+import { connect } from "react-redux"
+import { photoInterface } from "../../../Redux/InterfacesEntity/photo.interface"
 
-const arrayOfWorks = [
-  { namePhoto: "womanWithGlasses", photoIMG: womanWithGlasses },
-  { namePhoto: "manWithoutBeard", photoIMG: manWithoutBeard },
-  { namePhoto: "manWithSmallBeard", photoIMG: manWithSmallBeard },
-  { namePhoto: "manWithBigBeard", photoIMG: manWithBigBeard },
-  { namePhoto: "womanWithoutGlasses", photoIMG: womanWithoutGlasses },
-  { namePhoto: "womanWithGlasses", photoIMG: womanWithGlasses },
-]
+type TeamSectionProps = {
+  listTeamPhoto: photoInterface[],
+}
 
-// type SearchProps = {
-//   dispatch: any,
-// }
-
-const TeamSection: React.FunctionComponent = () => {
+const TeamSection: React.FunctionComponent<TeamSectionProps> = ({
+  listTeamPhoto,
+}) => {
   return (
     <section className={"team-section"}>
       <div className={"team-section__header"}>
@@ -29,7 +19,7 @@ const TeamSection: React.FunctionComponent = () => {
         </h5>
       </div>
       <Photos
-        arrayOfWorks={arrayOfWorks}
+        arrayPhotos={listTeamPhoto}
         className={"team-section-photo"}
         isInformationBlock={true}
       />
@@ -37,8 +27,8 @@ const TeamSection: React.FunctionComponent = () => {
   )
 }
 
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
+const mapStateToProps = (state: any) => ({
+  listTeamPhoto: state.photo.listTeamPhoto,
+})
 
-export default TeamSection
+export default connect(mapStateToProps)(TeamSection)

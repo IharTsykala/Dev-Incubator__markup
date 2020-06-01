@@ -1,22 +1,15 @@
 import React from "react"
 import Photos from "../../../Components/Photos/Photos"
-import cake from "../../../assets/cake.png"
-import businessCards from "../../../assets/businessCards.png"
-import bottles from "../../../assets/bottles.png"
-import book from "../../../assets/book.png"
-import mathematik from "../../../assets/mathematik.png"
-import healingTea from "../../../assets/healingTea.png"
+import { connect } from "react-redux"
+import { photoInterface } from "../../../Redux/InterfacesEntity/photo.interface"
 
-const arrayOfWorks = [
-  { namePhoto: "cake", photoIMG: cake },
-  { namePhoto: "businessCards", photoIMG: businessCards },
-  { namePhoto: "bottles", photoIMG: bottles },
-  { namePhoto: "book", photoIMG: book },
-  { namePhoto: "mathematik", photoIMG: mathematik },
-  { namePhoto: "healingTea", photoIMG: healingTea },
-]
+type SearchProps = {
+  listWorksPhoto: photoInterface[],
+}
 
-const WorksSection: React.FunctionComponent = () => {
+const WorksSection: React.FunctionComponent<SearchProps> = ({
+  listWorksPhoto,
+}) => {
   return (
     <section className={"works-section"}>
       <div className={"works-section__header"}>
@@ -25,9 +18,13 @@ const WorksSection: React.FunctionComponent = () => {
           Lorem ipsum dolor sit amet event landing template
         </h5>
       </div>
-      <Photos arrayOfWorks={arrayOfWorks} className={"our-works"} />
+      <Photos arrayPhotos={listWorksPhoto} className={"our-works"} />
     </section>
   )
 }
 
-export default WorksSection
+const mapStateToProps = (state: any) => ({
+  listWorksPhoto: state.photo.listWorksPhoto,
+})
+
+export default connect(mapStateToProps)(WorksSection)

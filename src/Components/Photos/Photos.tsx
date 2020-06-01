@@ -1,25 +1,21 @@
 import React from "react"
 import InformationBlock from "../InformationBlock/InformationBlock"
-
-interface WorksInterface {
-  namePhoto: string;
-  photoIMG: string;
-}
+import { photoInterface } from "../../Redux/InterfacesEntity/photo.interface"
 
 type OurWorksProps = {
-  arrayOfWorks: [WorksInterface] | any,
+  arrayPhotos: photoInterface[],
   className: string,
   isInformationBlock?: boolean,
 }
 
 const Photos: React.FunctionComponent<OurWorksProps> = ({
-  arrayOfWorks,
+  arrayPhotos,
   className,
   isInformationBlock,
 }) => {
   return (
     <ul className={className}>
-      {arrayOfWorks.map((item: WorksInterface, index: number) => {
+      {arrayPhotos.map((item: photoInterface, index: number) => {
         return (
           <li className={`${className}__photo-container`} key={index}>
             {isInformationBlock && (
