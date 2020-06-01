@@ -36,6 +36,7 @@ $helloSectionHeightMax1439: 50vw;
 $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
 $aboutSectionHeight: 1000px;
+$aboutSectionHeightMax1439: 60vw;
 $baseSectionHeaderHeight: 200px;
 $workSectionHeight: 1165px;
 $teamSectionHeight: 1360px;
@@ -46,8 +47,8 @@ $dataSectionFormHeight: 460px;
 $paddingBaseContent: 0 150px;
 $paddingBaseContentMax1440: 0 10vw;
 $paddingAboutSectionContent: 0 135px;
-$pbDescriptionHeader: 30px;
-$pbDescriptionText: 45px;
+$pbDescriptionHeader: 20px;
+$pbDescriptionText: 35px;
 $paddingSVG: 20%;
 //margin
 $marginDescription: 0 55px;
@@ -92,6 +93,8 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 body {
@@ -155,13 +158,13 @@ body {
   grid-template-rows: 310px 1fr;
   background-color: $backgroundColorHeader;
   @media (max-width: 1439px) {
-    grid-template-rows: 50% 1fr;;
-  }
+    grid-template-rows: 50% 1fr;  }
   .hello-section__header {
     text-align: center;
     align-self: end;
     font-size: 45px;
-    letter-spacing: 1rem*000.35;
+
+    letter-spacing: 1rem*000.15;
     text-transform: uppercase;
     color: $helloSectionColor;
     @media (max-width: 1439px) {
@@ -199,6 +202,7 @@ body {
     margin-bottom: 4%;
     cursor: pointer;
     font-size: 18px;
+    font-weight: 400;
     letter-spacing: 1rem*000.15;
   }
 }
@@ -229,11 +233,46 @@ body {
   @extend %base-sections;
   background-color: $aboutSectionBackgroundColor;
   padding: $paddingAboutSectionContent;
+  @media (max-width: 1439px) {
+    height: $aboutSectionHeightMax1439;
+    grid-template-rows: 15vw 1fr;
+    padding: 0 5vw;
+  }
+  @media (max-width: 800px) {
+    grid-template-rows: 10vw 1fr;
+  }
+  @media (max-width: 480px) {
+    grid-template-rows: 15vw 1fr;
+  }
   .about-section__header {
     @extend %base-sections-header;
     grid-template-rows: 160px 1fr;
+    @media (max-width: 1439px) {
+      align-items: center;
+      grid-template-rows:40% 1fr;
+    }
     .about-section__primary-header {
-      letter-spacing: 1rem*000.35;
+      letter-spacing: 1rem*000.15;
+      @media (max-width: 1439px) {
+      font-size: 25px;
+      }
+      @media (max-width: 800px) {
+        font-size: 15px;
+      }
+    }
+    .about-section__secondary-header  {
+      padding-bottom: 10px;
+      font-weight: normal;
+      font-size: 20px;
+      @media (max-width: 1439px) {
+        font-size: 15px;
+      }
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
+      @media (max-width: 480px) {
+        font-size: 8px;
+      }
     }
 
   }
@@ -241,23 +280,71 @@ body {
     @extend %base-sections-content;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    //align-content: center;
+    margin-bottom: 55px;
+    @media (max-width: 1439px) {
+      grid-template-columns: 30% 1fr;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
     .about-section__photo {
-      //width: 100%;
-      //height: 100%;
-      //justify-self: center;
+      @media (max-width: 1439px) {
+        height: 30vw;
+      }
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     .about-section__photo_box-shadow_around {
       box-shadow: $boxShadowAroundPhoto;
     }
     .about-section__description {
       margin: $marginDescription;
+      @media (max-width: 1439px) {
+        margin: 0;
+      }
       .about-section__description-header {
         text-transform: uppercase;
+        font-family: 'Merriweather', serif;
+        letter-spacing: 1rem*000.1;
         padding-bottom: $pbDescriptionHeader;
+        font-size: 19px;
+        @media (max-width: 1439px) {
+        font-size: 15px;
+        letter-spacing: normal;
+        }
+        @media (max-width: 800px) {
+          font-size: 12px;
+          line-height: 1.3;
+          padding-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+          font-size: 10px;
+          line-height: 1;
+          padding-bottom: 8px;
+        }
       }
       .about-section__description-text {
         padding-bottom: $pbDescriptionText;
+        line-height: 1.7;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        @media (max-width: 1439px) {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+        @media (max-width: 800px) {
+          font-size: 12px;
+          line-height: 1.3;
+          padding-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+          font-size: 10px;
+          line-height: 1;
+          padding-bottom: 8px;
+        }
       }
     }
   }
