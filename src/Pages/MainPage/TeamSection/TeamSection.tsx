@@ -20,7 +20,7 @@ const TeamSection: React.FunctionComponent<TeamSectionProps> = ({
       </div>
       <Photos
         arrayPhotos={listTeamPhoto}
-        className={"team-section-photo"}
+        className={"team-section-photos"}
         isInformationBlock={true}
       />
     </section>

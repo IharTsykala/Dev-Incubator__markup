@@ -3,11 +3,6 @@ import { connect } from "react-redux"
 import Map from "./Map/Map"
 import { mapCenter } from "../../../Redux/InterfacesEntity/mapCenter.interface"
 
-const center = {
-  lat: 53.901634,
-  lng: 27.545265,
-}
-
 type DataSectionProps = {
   mapCenter: mapCenter,
 }
@@ -71,5 +66,3 @@ const mapStateToProps = (state: any) => ({
 })
 
 export default connect(mapStateToProps)(DataSection)
-
-//AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w  -- Key Map API
