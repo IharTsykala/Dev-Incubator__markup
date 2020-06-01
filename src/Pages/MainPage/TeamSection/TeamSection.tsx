@@ -30,7 +30,7 @@ const TeamSection: React.FunctionComponent = () => {
       </div>
       <Photos
         arrayOfWorks={arrayOfWorks}
-        className={"team-section-photos"}
+        className={"team-section-photo"}
         isInformationBlock={true}
       />
     </section>

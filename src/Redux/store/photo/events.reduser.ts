@@ -1,5 +1,5 @@
 // import { CardItem } from "../../InterfacesEntity/CardItem.interface"
-import { ActionTypes } from "./events.actions"
+import { ActionTypes } from "./photo.actions"
 import { Action } from "../../interfacesAction/action.interface"
 
 export interface State {
