@@ -41,6 +41,7 @@ $baseSectionHeaderHeight: 200px;
 $workSectionHeight: 1165px;
 $workSectionHeightMax1439: 80vw;
 $teamSectionHeight: 1360px;
+$teamSectionHeightMax1439: 90vw;
 $workSectionHeaderHeight: 160px;
 $dataSectionHeight: 700px;
 $dataSectionFormHeight: 460px;
@@ -149,7 +150,7 @@ body {
   display: grid;
   grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
   @media (max-width: 1439px) {
-    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeight $dataSectionHeight;
+    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeightMax1439 $dataSectionHeight;
   }
 }
 
@@ -413,7 +414,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     }
-    @media (max-width: 1439px) {
+    @media (max-width: 800px) {
       gap: 0;
     }
     .our-works__photo-container {
@@ -432,16 +433,56 @@ body {
 .team-section {
   @extend %base-sections;
   grid-template-rows: $workSectionHeaderHeight 1fr;
+  background-color: #f9fbfb;
+  @media (max-width: 1439px) {
+    //height: $workSectionHeightMax1439;
+    grid-template-rows: 15vw 1fr;
+  }
   //padding: $paddingBaseContent;
   .team-section__header {
     @extend %base-sections-header;
     grid-template-rows: 140px 1fr;
+    @media (max-width: 1439px) {
+      align-items: center;
+      grid-template-rows:40% 1fr;
+    }
+    .team-section__primary-header {
+      letter-spacing: 1rem*000.15;
+      @media (max-width: 1439px) {
+        font-size: 25px;
+      }
+      @media (max-width: 800px) {
+        font-size: 15px;
+      }
+    }
+    .team-section__secondary-header  {
+      padding-bottom: 10px;
+      font-weight: normal;
+      font-size: 19px;
+      @media (max-width: 1439px) {
+        font-size: 15px;
+      }
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
+      @media (max-width: 480px) {
+        font-size: 8px;
+      }
+    }
   }
   .team-section-photos {
     @extend %base-sections-content;
     grid-template-columns: repeat(3, 365px);
     grid-template-rows: repeat(2, 440px);
     justify-self: center;
+    padding-bottom: 60px;
+    @media (max-width: 1439px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @media (max-width: 800px) {
+      gap: 0;
+    }
     .team-section-photos__photo-container {
       position: relative;
       list-style-type: none;
@@ -481,7 +522,13 @@ body {
               color: $baseLightColor;
             }
           }
+          @media (max-width: 1279px) {
+            display: none;
+          }
         }
+      }
+      @media (max-width: 1439px) {
+        width: 30vw;
       }
       .team-section-photos__photo {
         width: 100%;
@@ -503,8 +550,9 @@ body {
 
 %base-form-private-data__input {
   background-color: $dataSectionFormBackground;
-  border: 0px;
+  border: 0;
   border-bottom: 1px solid $baseLightColor;
+  height: 25px;
   &::placeholder {
     color: $baseLightColor;
   }
@@ -518,6 +566,7 @@ body {
   column-gap: 10px;
   .form-private-data {
     @extend %data-section-blocks;
+    padding: 50px 30px;
     .form-private-data__input {
       @extend %base-form-private-data__input;
     }
@@ -531,7 +580,7 @@ body {
       border-radius: $buttonBorderRadius;
       background-color: $baseMiddleColor;
       text-transform: uppercase;
-      border: 0px;
+      border: 0;
     }
   }
   .our-contacts{

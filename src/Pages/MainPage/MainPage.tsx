@@ -11,8 +11,8 @@ const MainPage: React.FunctionComponent = () => {
       <HelloSection />
       <AboutSection />
       <WorksSection />
-      {/*<TeamSection />*/}
-      {/*<DataSection />*/}
+      <TeamSection />
+      <DataSection />
     </div>
   )
 }
