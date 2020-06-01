@@ -14,9 +14,10 @@ $baseDarkColor: #181919;
 $helloSectionColor: #505050;
 $helloSectionMark: #b2f2ee;
 //width
-$maxWrapperWidth: 1440px;
-$wrapperWidth: 100vw;
-$logoHeaderWidth: 130px;
+$maxWrapper1600Width: 1600px;
+$maxWrapper1440Width: 1440px;
+$wrapperWidth: 100%;
+$logoHeaderWidth: 110px;
 $footerIconWidth: 45px;
 $glassOnBeerdekelWidth: 150px;
 $contactUsButtonWidth: 230px;
@@ -25,10 +26,13 @@ $dataSectionFormWidth: 610px;
 $dataSectionOurContactsWidth: 500px;
 //height
 $headerHeight: 110px;
+$headerHeightMax1439: 15vw;
 $footerHeight: 320px;
-$logoHeaderHeight: 60px;
+$footerHeightMax1439: 45vw;
+$logoHeaderHeight: 45px;
 $footerIconHeight: 40px;
 $helloSectionHeight: 700px;
+$helloSectionHeightMax1439: 50vw;
 $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
 $aboutSectionHeight: 1000px;
@@ -40,6 +44,7 @@ $dataSectionHeight: 700px;
 $dataSectionFormHeight: 460px;
 //padding
 $paddingBaseContent: 0 150px;
+$paddingBaseContentMax1440: 0 10vw;
 $paddingAboutSectionContent: 0 135px;
 $pbDescriptionHeader: 30px;
 $pbDescriptionText: 45px;
@@ -65,6 +70,8 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   text-transform: uppercase;
   display: grid;
   align-items: end;
+  font-size: 25px;
+
   //grid-template-rows: 180px 1fr;
 }
 
@@ -72,8 +79,9 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   display: grid;
   //justify-self: center;
   align-content: center;
-  gap: 15px
+  gap: 15px;
 }
+
 %base-render-icon {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -90,19 +98,34 @@ body {
   background-color: $backgroundColorBody;
 }
 
-.wrapper {
-  max-width: $maxWrapperWidth;
+%base-wrapper {
+  max-width: $maxWrapper1600Width;
   width: $wrapperWidth;
   background-color: $backgroundColorWrapper;
   margin: 0 auto;
   display: grid;
+}
+
+.wrapper1600 {
+  @extend %base-wrapper;
+}
+
+.wrapper1440 {
+  @extend %base-wrapper;
+  max-width: $maxWrapper1440Width;
   grid-template-rows: $headerHeight 1fr $footerHeight;
+  @media (max-width: 1439px) {
+    grid-template-rows: $headerHeightMax1439 1fr $headerHeightMax1439;
+  }
 }
 
 //HEADER
 .header {
   padding: $paddingBaseContent;
   background-color: $backgroundColorHeader;
+  @media (max-width: 1439px) {
+    padding: $paddingBaseContentMax1440;
+  }
   display: grid;
     .header__logo {
       display: grid;
@@ -117,68 +140,44 @@ body {
   height: 100%;
 }
 
-//FOOTER
-.footer {
-  background-color: $backgroundColorFooter;
-  display: grid;
-}
-
-.footer-social-networks {
-  display: grid;
-  justify-self: center;
-  align-self: center;
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: $socialNetworkGap;
-  .footer-social-networks__header {
-    color: $baseLightColor;
-    justify-self: center;
-    align-self: center;
-    text-transform: uppercase;
-  }
-  .social-networks__icons-list {
-    @extend %base-render-icon;
-    column-gap: $iconColumnGap;
-  }
-}
-
-.social-networks-icon {
-  height: $footerIconHeight;
-  width: $footerIconWidth;
-  background-color: $backgroundColorFooterIcon;
-  display: grid;
-    &:hover {
-    background-color: $baseMiddleColor;
-    }
-  .social-networks-icon__svg {
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    color: #eff0f2;
-    width: 100%;
-    height: 100%;
-    padding: $paddingSVG;
-      &:hover {
-      color:  $backgroundColorFooter;
-      }
-  }
-}
-
 //MAIN
 .main-page {
   display: grid;
   grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
+  @media (max-width: 1439px) {
+    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
+  }
 }
 
 .hello-section{
   position: relative;
   display: grid;
-  grid-template-rows: 300px 1fr;
+  grid-template-rows: 310px 1fr;
   background-color: $backgroundColorHeader;
+  @media (max-width: 1439px) {
+    grid-template-rows: 50% 1fr;;
+  }
   .hello-section__header {
     text-align: center;
     align-self: end;
+    font-size: 45px;
+    letter-spacing: 1rem*000.35;
     text-transform: uppercase;
     color: $helloSectionColor;
+    @media (max-width: 1439px) {
+      align-self: center;
+    }
+    @media (max-width: 800px) {
+      font-size: 30px;
+      letter-spacing: normal;
+    }
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
+    @media (max-width: 400px) {
+      font-size: 15px;
+    }
+
   }
   .hello-section__header_text-shadow_bottom {
     text-shadow: 3px 5px 4px #b1b1b1;
@@ -186,6 +185,7 @@ body {
   .hello-section__header_mark_green {
     background-color: $helloSectionMark;
     color: $helloSectionColor;
+    padding: 0 10px;
   }
   .contact-us-button {
     height: $buttonHeight;
@@ -196,7 +196,10 @@ body {
     border: 2px solid $helloSectionColor;
     justify-self: center;
     align-self: center;
+    margin-bottom: 4%;
     cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1rem*000.15;
   }
 }
 
@@ -204,8 +207,8 @@ body {
   position: absolute;
   height: $glassOnBeerdekelHeight;
   width: $glassOnBeerdekelWidth;
-  right: 200px;
-  bottom: 100px;
+  right: 12%;
+  bottom: 17%;
   .beerdekel {
     position: absolute;
     z-index: 1;
@@ -217,6 +220,9 @@ body {
     position: absolute;
     z-index: 2;
   }
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 .about-section {
@@ -225,7 +231,11 @@ body {
   padding: $paddingAboutSectionContent;
   .about-section__header {
     @extend %base-sections-header;
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: 160px 1fr;
+    .about-section__primary-header {
+      letter-spacing: 1rem*000.35;
+    }
+
   }
   .about-section__information {
     @extend %base-sections-content;
@@ -410,8 +420,48 @@ body {
   }
 }
 
+//FOOTER
+.footer {
+  background-color: $backgroundColorFooter;
+  display: grid;
+}
 
+.footer-social-networks {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: $socialNetworkGap;
+  .footer-social-networks__header {
+    color: $baseLightColor;
+    justify-self: center;
+    align-self: center;
+    text-transform: uppercase;
+  }
+  .social-networks__icons-list {
+    @extend %base-render-icon;
+    column-gap: $iconColumnGap;
+  }
+}
 
-
-
-
+.social-networks-icon {
+  height: $footerIconHeight;
+  width: $footerIconWidth;
+  background-color: $backgroundColorFooterIcon;
+  display: grid;
+  &:hover {
+    background-color: $baseMiddleColor;
+  }
+  .social-networks-icon__svg {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    color: #eff0f2;
+    width: 100%;
+    height: 100%;
+    padding: $paddingSVG;
+    &:hover {
+      color:  $backgroundColorFooter;
+    }
+  }
+}

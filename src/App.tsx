@@ -15,12 +15,14 @@ const store = createStore(
 
 const App: React.FC = () => (
   <Provider store={store}>
-    <div className={"wrapper"}>
-      <Header />
-      <main className={"main"}>
-        <MainPage />
-      </main>
-      <Footer />
+    <div className={"wrapper1600"}>
+      <div className={"wrapper1440"}>
+        <Header />
+        <main className={"main"}>
+          <MainPage />
+        </main>
+        {/*<Footer />*/}
+      </div>
     </div>
   </Provider>
 )

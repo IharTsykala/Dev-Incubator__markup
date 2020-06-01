@@ -10,9 +10,9 @@ const MainPage: React.FunctionComponent = () => {
     <div className={"main-page"}>
       <HelloSection />
       <AboutSection />
-      <WorksSection />
-      <TeamSection />
-      <DataSection />
+      {/*<WorksSection />*/}
+      {/*<TeamSection />*/}
+      {/*<DataSection />*/}
     </div>
   )
 }
