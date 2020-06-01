@@ -35,10 +35,11 @@ $helloSectionHeight: 700px;
 $helloSectionHeightMax1439: 50vw;
 $glassOnBeerdekelHeight: 120px;
 $buttonHeight: 50px;
-$aboutSectionHeight: 1000px;
-$aboutSectionHeightMax1439: 60vw;
+$aboutSectionHeight: 980px;
+$aboutSectionHeightMax1439: 70vw;
 $baseSectionHeaderHeight: 200px;
 $workSectionHeight: 1165px;
+$workSectionHeightMax1439: 80vw;
 $teamSectionHeight: 1360px;
 $workSectionHeaderHeight: 160px;
 $dataSectionHeight: 700px;
@@ -148,7 +149,7 @@ body {
   display: grid;
   grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
   @media (max-width: 1439px) {
-    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
+    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeight $dataSectionHeight;
   }
 }
 
@@ -234,7 +235,7 @@ body {
   background-color: $aboutSectionBackgroundColor;
   padding: $paddingAboutSectionContent;
   @media (max-width: 1439px) {
-    height: $aboutSectionHeightMax1439;
+    //height: $aboutSectionHeightMax1439;
     grid-template-rows: 15vw 1fr;
     padding: 0 5vw;
   }
@@ -263,7 +264,7 @@ body {
     .about-section__secondary-header  {
       padding-bottom: 10px;
       font-weight: normal;
-      font-size: 20px;
+      font-size: 19px;
       @media (max-width: 1439px) {
         font-size: 15px;
       }
@@ -274,13 +275,12 @@ body {
         font-size: 8px;
       }
     }
-
   }
   .about-section__information {
     @extend %base-sections-content;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
     @media (max-width: 1439px) {
       grid-template-columns: 30% 1fr;
       margin-bottom: 0;
@@ -353,7 +353,11 @@ body {
 .works-section {
   @extend %base-sections;
   position: relative;
-  //padding: $paddingBaseContent;
+  padding-bottom: 15px;
+  @media (max-width: 1439px) {
+    //height: $workSectionHeightMax1439;
+    grid-template-rows: 15vw 1fr;
+  }
   .modal-window {
     position: absolute;
     top: 0;
@@ -371,15 +375,52 @@ body {
   }
   .works-section__header {
     @extend %base-sections-header;
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: 160px 1fr;
+    @media (max-width: 1439px) {
+      align-items: center;
+      grid-template-rows:40% 1fr;
+    }
+    .works-section__primary-header {
+      letter-spacing: 1rem*000.15;
+      @media (max-width: 1439px) {
+        font-size: 25px;
+      }
+      @media (max-width: 800px) {
+        font-size: 15px;
+      }
+    }
+    .works-section__secondary-header  {
+      padding-bottom: 10px;
+      font-weight: normal;
+      font-size: 19px;
+      @media (max-width: 1439px) {
+        font-size: 15px;
+      }
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
+      @media (max-width: 480px) {
+        font-size: 8px;
+      }
+    }
   }
   .our-works {
     @extend %base-sections-content;
     grid-template-columns: repeat(3, 375px);
     grid-template-rows: repeat(2, 360px);
     justify-self: center;
+    @media (max-width: 1439px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    }
+    @media (max-width: 1439px) {
+      gap: 0;
+    }
     .our-works__photo-container {
       list-style-type: none;
+      @media (max-width: 1439px) {
+        width: 30vw;
+      }
       .our-works__photo {
         width: 100%;
         height: 100%;
