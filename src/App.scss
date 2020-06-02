@@ -211,6 +211,12 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1rem*000.15;
+    &:hover {
+      transition: 1s;
+      transform: scale(0.98);
+      background-color: $baseMiddleColor;
+      border: 0;
+    }
   }
 }
 
@@ -497,7 +503,7 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
       .information-block {
         display: none;
       }
-      //&:hover {
+      &:hover {
         .information-block {
           position: absolute;
           width: 90%;
@@ -537,13 +543,15 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
             justify-self: start;
             .information-block-icon__svg:hover {
               color: $baseLightColor;
+              transition: 1s;
+              transform: scale(0.98);
             }
           }
           @media (max-width: 1279px) {
             display: none;
           }
         }
-      //}
+      }
       @media (max-width: 1439px) {
         width: 30vw;
       }
@@ -642,6 +650,11 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
       font-weight: 400;
       letter-spacing: 3px;
       cursor: pointer;
+      &:hover {
+        transition: 1s;
+        transform: scale(0.98);
+        background-color: $baseLightColor;
+      }
       @media (max-width: 800px) {
         font-size: 12px;
         width: 60%;
@@ -745,10 +758,10 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   background-color: $backgroundColorFooterIcon;
   display: grid;
   cursor: pointer;
-  cursor: pointer;
-  cursor: pointer;
   &:hover {
     background-color: $baseMiddleColor;
+    transition: 1s;
+    transform: scale(0.98);
   }
   .social-networks-icon__svg {
     display: grid;

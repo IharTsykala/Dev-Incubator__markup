@@ -17,7 +17,7 @@
   gap: 15px;
 }
 
-.footer-social-networks .social-networks__icons-list, .team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list {
+.footer-social-networks .social-networks__icons-list, .team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__icons-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -147,6 +147,12 @@
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.15rem;
+}
+.hello-section .contact-us-button:hover {
+  transition: 1s;
+  transform: scale(0.98);
+  background-color: #6eeee4;
+  border: 0;
 }
 
 .cup-on-beerdekel {
@@ -500,7 +506,7 @@
 .team-section .team-section-photos .team-section-photos__photo-container .information-block {
   display: none;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block {
   position: absolute;
   width: 90%;
   height: 55%;
@@ -512,35 +518,37 @@
   bottom: 15px;
   padding: 30px 35px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__header {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__header {
   text-transform: uppercase;
   font-family: "Merriweather", serif;
   font-size: 22px;
   justify-self: start;
   height: 35px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__header-span {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__header-span {
   font-size: 16px;
   font-weight: normal;
   font-style: italic;
   text-transform: none;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__text {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__text {
   overflow-y: auto;
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
   height: 100px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__icons-list {
   height: 20px;
   column-gap: 5px;
   justify-self: start;
 }
-.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list .information-block-icon__svg:hover {
+.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__icons-list .information-block-icon__svg:hover {
   color: #bbb8b9;
+  transition: 1s;
+  transform: scale(0.98);
 }
 @media (max-width: 1279px) {
-  .team-section .team-section-photos .team-section-photos__photo-container .information-block {
+  .team-section .team-section-photos .team-section-photos__photo-container:hover .information-block {
     display: none;
   }
 }
@@ -650,6 +658,11 @@
   font-weight: 400;
   letter-spacing: 3px;
   cursor: pointer;
+}
+.data-section .form-private-data .form-private-data__button:hover {
+  transition: 1s;
+  transform: scale(0.98);
+  background-color: #bbb8b9;
 }
 @media (max-width: 800px) {
   .data-section .form-private-data .form-private-data__button {
@@ -764,11 +777,11 @@
   background-color: #424648;
   display: grid;
   cursor: pointer;
-  cursor: pointer;
-  cursor: pointer;
 }
 .social-networks-icon:hover {
   background-color: #6eeee4;
+  transition: 1s;
+  transform: scale(0.98);
 }
 .social-networks-icon .social-networks-icon__svg {
   display: grid;
