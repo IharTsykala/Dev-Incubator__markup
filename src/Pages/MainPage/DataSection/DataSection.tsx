@@ -50,7 +50,7 @@ const DataSection: React.FunctionComponent<DataSectionProps> = ({
           <p className={"our-contacts__text"}>Web: www.designagency.net</p>
           <p className={"our-contacts__text"}>E-mail: info@designagency.net</p>
         </div>
-        <div className={"our-contacts__text"}>
+        <div className={"our-contacts__map"}>
           <Map
             mapCenter={mapCenter}
             googleMapsApiKey={"AIzaSyDDuAn5EN9v9O3dVjMPXP-vnV4MyowsY4w"}
