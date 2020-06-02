@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Dev-Incubator__markup/static/css/main.bf1092ab.chunk.css",
+    "main.js": "/Dev-Incubator__markup/static/js/main.df9cb92c.chunk.js",
+    "main.js.map": "/Dev-Incubator__markup/static/js/main.df9cb92c.chunk.js.map",
+    "runtime-main.js": "/Dev-Incubator__markup/static/js/runtime-main.382cdcdb.js",
+    "runtime-main.js.map": "/Dev-Incubator__markup/static/js/runtime-main.382cdcdb.js.map",
+    "static/js/2.cb8e72ce.chunk.js": "/Dev-Incubator__markup/static/js/2.cb8e72ce.chunk.js",
+    "static/js/2.cb8e72ce.chunk.js.map": "/Dev-Incubator__markup/static/js/2.cb8e72ce.chunk.js.map",
+    "index.html": "/Dev-Incubator__markup/index.html",
+    "precache-manifest.56cee476fd82ea4f5720880569a2007e.js": "/Dev-Incubator__markup/precache-manifest.56cee476fd82ea4f5720880569a2007e.js",
+    "service-worker.js": "/Dev-Incubator__markup/service-worker.js",
+    "static/css/main.bf1092ab.chunk.css.map": "/Dev-Incubator__markup/static/css/main.bf1092ab.chunk.css.map",
+    "static/js/2.cb8e72ce.chunk.js.LICENSE.txt": "/Dev-Incubator__markup/static/js/2.cb8e72ce.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/Dev-Incubator__markup/static/media/backgroundWithWinter.0392a14b.png",
+    "static/media/book.png": "/Dev-Incubator__markup/static/media/book.a2b324fa.png",
+    "static/media/bottles.png": "/Dev-Incubator__markup/static/media/bottles.a6ed31ce.png",
+    "static/media/businessCards.png": "/Dev-Incubator__markup/static/media/businessCards.d510c48e.png",
+    "static/media/cake.png": "/Dev-Incubator__markup/static/media/cake.e67cba7f.png",
+    "static/media/healingTea.png": "/Dev-Incubator__markup/static/media/healingTea.eac0e644.png",
+    "static/media/manWithBigBeard.png": "/Dev-Incubator__markup/static/media/manWithBigBeard.5f1f3e1b.png",
+    "static/media/manWithSmallBeard.png": "/Dev-Incubator__markup/static/media/manWithSmallBeard.cd2e58ab.png",
+    "static/media/manWithoutBeard.png": "/Dev-Incubator__markup/static/media/manWithoutBeard.77a8927d.png",
+    "static/media/mathematik.png": "/Dev-Incubator__markup/static/media/mathematik.98377b42.png",
+    "static/media/officePlace.png": "/Dev-Incubator__markup/static/media/officePlace.4e943abb.png",
+    "static/media/womanWithGlasses.png": "/Dev-Incubator__markup/static/media/womanWithGlasses.0c1a3bc3.png",
+    "static/media/womanWithoutGlasses.png": "/Dev-Incubator__markup/static/media/womanWithoutGlasses.9dc7812a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.382cdcdb.js",
+    "static/js/2.cb8e72ce.chunk.js",
+    "static/css/main.bf1092ab.chunk.css",
+    "static/js/main.df9cb92c.chunk.js"
+  ]
+}
