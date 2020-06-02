@@ -17,7 +17,7 @@
   gap: 15px;
 }
 
-.footer-social-networks .social-networks__icons-list, .team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__icons-list {
+.footer-social-networks .social-networks__icons-list, .team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -28,10 +28,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-}
-
-body {
-  background-color: cornflowerblue;
 }
 
 .wrapper1440, .wrapper1600 {
@@ -424,6 +420,7 @@ body {
 .works-section .our-works .our-works__photo-container .our-works__photo {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .team-section {
@@ -498,11 +495,12 @@ body {
   position: relative;
   list-style-type: none;
   display: grid;
+  cursor: pointer;
 }
 .team-section .team-section-photos .team-section-photos__photo-container .information-block {
   display: none;
 }
-.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block {
+.team-section .team-section-photos .team-section-photos__photo-container .information-block {
   position: absolute;
   width: 90%;
   height: 55%;
@@ -512,25 +510,37 @@ body {
   justify-self: center;
   justify-items: center;
   bottom: 15px;
-  padding: 30px 40px;
+  padding: 30px 35px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__header {
+.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__header {
   text-transform: uppercase;
+  font-family: "Merriweather", serif;
+  font-size: 22px;
+  justify-self: start;
+  height: 35px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__header-span {
+.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__header-span {
   font-size: 16px;
   font-weight: normal;
   font-style: italic;
   text-transform: none;
 }
-.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__text {
+.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__text {
   overflow-y: auto;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  height: 100px;
 }
-.team-section .team-section-photos .team-section-photos__photo-container:hover .information-block .information-block__icons-list .information-block-icon__svg:hover {
+.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list {
+  height: 20px;
+  column-gap: 5px;
+  justify-self: start;
+}
+.team-section .team-section-photos .team-section-photos__photo-container .information-block .information-block__icons-list .information-block-icon__svg:hover {
   color: #bbb8b9;
 }
 @media (max-width: 1279px) {
-  .team-section .team-section-photos .team-section-photos__photo-container:hover .information-block {
+  .team-section .team-section-photos .team-section-photos__photo-container .information-block {
     display: none;
   }
 }
@@ -639,6 +649,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 3px;
+  cursor: pointer;
 }
 @media (max-width: 800px) {
   .data-section .form-private-data .form-private-data__button {
@@ -714,6 +725,12 @@ body {
   align-self: center;
   grid-template-rows: repeat(2, 1fr);
   row-gap: 5px;
+  padding-bottom: 65px;
+}
+@media (max-width: 1439px) {
+  .footer-social-networks {
+    padding-bottom: 0;
+  }
 }
 @media (max-width: 480px) {
   .footer-social-networks {
@@ -725,6 +742,7 @@ body {
   justify-self: center;
   align-self: center;
   text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
 }
 @media (max-width: 480px) {
   .footer-social-networks .footer-social-networks__header {
@@ -745,6 +763,9 @@ body {
   width: 45px;
   background-color: #424648;
   display: grid;
+  cursor: pointer;
+  cursor: pointer;
+  cursor: pointer;
 }
 .social-networks-icon:hover {
   background-color: #6eeee4;
