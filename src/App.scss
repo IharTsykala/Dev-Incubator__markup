@@ -28,7 +28,7 @@ $dataSectionOurContactsWidth: 500px;
 $headerHeight: 110px;
 $headerHeightMax1439: 15vw;
 $footerHeight: 320px;
-$footerHeightMax1439: 45vw;
+$footerHeightMax1439: 20vw;
 $logoHeaderHeight: 45px;
 $footerIconHeight: 40px;
 $helloSectionHeight: 700px;
@@ -122,7 +122,7 @@ body {
   max-width: $maxWrapper1440Width;
   grid-template-rows: $headerHeight 1fr $footerHeight;
   @media (max-width: 1439px) {
-    grid-template-rows: $headerHeightMax1439 1fr $headerHeightMax1439;
+    grid-template-rows: $headerHeightMax1439 1fr $footerHeightMax1439;
   }
 }
 
@@ -700,15 +700,24 @@ body {
   align-self: center;
   grid-template-rows: repeat(2, 1fr);
   row-gap: $socialNetworkGap;
+  @media (max-width: 480px) {
+    grid-template-rows: 1fr
+  }
   .footer-social-networks__header {
     color: $baseLightColor;
     justify-self: center;
     align-self: center;
     text-transform: uppercase;
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   .social-networks__icons-list {
     @extend %base-render-icon;
     column-gap: $iconColumnGap;
+    @media (max-width: 480px) {
+      align-self: center;
+    }
   }
 }
 

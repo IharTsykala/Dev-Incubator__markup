@@ -21,7 +21,7 @@ const App: React.FC = () => (
         <main className={"main"}>
           <MainPage />
         </main>
-        {/*<Footer />*/}
+        <Footer />
       </div>
     </div>
   </Provider>
