@@ -76,13 +76,10 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   display: grid;
   align-items: end;
   font-size: 25px;
-
-  //grid-template-rows: 180px 1fr;
 }
 
 %base-sections-content {
   display: grid;
-  //justify-self: center;
   align-content: center;
   gap: 15px;
 }
@@ -100,10 +97,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
-
-//body {
-//  background-color: $backgroundColorBody;
-//}
 
 %base-wrapper {
   max-width: $maxWrapper1600Width;
@@ -247,7 +240,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   background-color: $aboutSectionBackgroundColor;
   padding: $paddingAboutSectionContent;
   @media (max-width: 1439px) {
-    //height: $aboutSectionHeightMax1439;
     grid-template-rows: 15vw 1fr;
     padding: 0 5vw;
   }
@@ -367,7 +359,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   position: relative;
   padding-bottom: 15px;
   @media (max-width: 1439px) {
-    //height: $workSectionHeightMax1439;
     grid-template-rows: 15vw 1fr;
   }
   .modal-window {
@@ -447,10 +438,8 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   grid-template-rows: $workSectionHeaderHeight 1fr;
   background-color: #f9fbfb;
   @media (max-width: 1439px) {
-    //height: $workSectionHeightMax1439;
     grid-template-rows: 15vw 1fr;
   }
-  //padding: $paddingBaseContent;
   .team-section__header {
     @extend %base-sections-header;
     grid-template-rows: 140px 1fr;
@@ -515,14 +504,12 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
           justify-items: center;
           bottom: 15px;
           padding: 30px 35px;
-          //opacity: 0;
           .information-block__header {
             text-transform: uppercase;
             font-family: "Merriweather", serif;
             font-size: 22px;
             justify-self: start;
             height: 35px;
-            //padding-bottom: 10px;
           }
           .information-block__header-span {
             font-size: 16px;
@@ -577,7 +564,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
   background-color: $dataSectionFormBackground;
   border: 0;
   border-bottom: 1px solid $baseLightColor;
-  //height: 20px;
   &::placeholder {
     color: $baseLightColor;
     font-weight: 400;
@@ -597,9 +583,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
     padding: 0;
     margin: 0;
     grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: 800px) {
-    //grid-template-columns: 50% 50%;
   }
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
@@ -683,10 +666,6 @@ $boxShadowAroundPhoto: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0
       justify-self: center;
       height: 55vw;
       width: 90vw;
-    }
-    @media (max-width: 480px) {
-      //height: 40vw;
-      //width: 50vw;
     }
     .our-contacts__address-phone {
       padding: 10px;
