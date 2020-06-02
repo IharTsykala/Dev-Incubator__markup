@@ -43,8 +43,4 @@ const InformationBlock: React.FunctionComponent<InformationBlockProps> = ({
   )
 }
 
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
-
 export default InformationBlock
