@@ -44,6 +44,8 @@ $teamSectionHeight: 1360px;
 $teamSectionHeightMax1439: 90vw;
 $workSectionHeaderHeight: 160px;
 $dataSectionHeight: 700px;
+$dataSectionHeightMax1439: 40vw;
+$dataSectionHeightMax680: 110vw;
 $dataSectionFormHeight: 460px;
 //padding
 $paddingBaseContent: 0 150px;
@@ -150,7 +152,10 @@ body {
   display: grid;
   grid-template-rows: $helloSectionHeight $aboutSectionHeight $workSectionHeight $teamSectionHeight $dataSectionHeight;
   @media (max-width: 1439px) {
-    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeightMax1439 $dataSectionHeight;
+    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeightMax1439 $dataSectionHeightMax1439;
+  }
+  @media (max-width: 680px) {
+    grid-template-rows: $helloSectionHeightMax1439 $aboutSectionHeightMax1439 $workSectionHeightMax1439 $teamSectionHeightMax1439 $dataSectionHeightMax680;
   }
 }
 
@@ -556,6 +561,9 @@ body {
   &::placeholder {
     color: $baseLightColor;
     font-weight: 400;
+    @media (max-width: 1279px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -565,11 +573,39 @@ body {
   grid-template-columns: 625px 1fr;
   padding: $paddingBaseContent;
   column-gap: 10px;
+  @media (max-width: 1439px) {
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 800px) {
+    //grid-template-columns: 50% 50%;
+  }
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   .form-private-data {
     @extend %data-section-blocks;
     display: grid;
     grid-template-rows: repeat(3, 60px) 135px 90px;
     padding: 20px 30px;
+    @media (max-width: 1439px) {
+      grid-template-rows: repeat(3, 1fr) 3fr 2fr;
+      height: 30vw;
+      width: 40vw;
+      justify-self: center;
+    }
+    @media (max-width: 800px) {
+      width: 45vw;
+      justify-self: end;
+    }
+    @media (max-width: 680px) {
+      justify-self: center;
+      height: 55vw;
+      width: 90vw;
+      padding-top: 5px;
+    }
     .form-private-data__input {
       @extend %base-form-private-data__input;
       padding: 10px 0 0 10px;
@@ -577,6 +613,9 @@ body {
     .form-private-data__textarea {
       @extend %base-form-private-data__input;
       padding: 30px 0 0 10px;
+      @media (max-width: 800px) {
+        padding: 10px;
+      }
     }
     .form-private-data__button {
       width: $formButtonWidth;
@@ -590,6 +629,10 @@ body {
       font-size: 16px;
       font-weight: 400;
       letter-spacing: 3px;
+      @media (max-width: 800px) {
+        font-size: 12px;
+        width: 60%;
+      }
     }
   }
   .our-contacts{
@@ -598,6 +641,27 @@ body {
     grid-template-rows: 30% 15% 1fr;
     padding: 20px;
     color: $baseLightColor;
+    display: grid;
+    @media (max-width: 1439px) {
+      height: 30vw;
+      width: 40vw;
+      justify-self: center;
+      padding: 2%;
+    }
+    @media (max-width: 800px) {
+      width: 45vw;
+      justify-self: start;
+      padding-top: 0;
+    }
+    @media (max-width: 680px) {
+      justify-self: center;
+      height: 55vw;
+      width: 90vw;
+    }
+    @media (max-width: 480px) {
+      //height: 40vw;
+      //width: 50vw;
+    }
     .our-contacts__address-phone {
       padding: 10px;
     }
@@ -608,6 +672,13 @@ body {
       font-weight: 400;
       font-size: 14px;
       padding-bottom: 5px;
+      @media (max-width: 1280px) {
+        font-size: 12px;
+        padding: 0;
+      }
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
     }
     .our-contacts__map {
       width: 100%;
