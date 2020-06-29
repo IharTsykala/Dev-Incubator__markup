@@ -1,28 +1,26 @@
 import React from "react"
 import SocialNetworks from "../SocialNetworks/SocialNetworks"
-import {
-  faPinterestP,
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons"
+import { iconInterface } from "../../Redux/InterfacesEntity/icon.interface"
+import { connect } from "react-redux"
 
-const arraySocialNetworks = [
-  { nameIcon: faPinterestP },
-  { nameIcon: faTwitter },
-  { nameIcon: faFacebookF },
-  { nameIcon: faInstagram },
-]
+type FooterProps = {
+  listIconsFooter: iconInterface[],
+}
 
-const Footer: React.FunctionComponent = () => {
+const Footer: React.FunctionComponent<FooterProps> = ({ listIconsFooter }) => {
+  console.log(listIconsFooter)
   return (
     <footer className={"footer"}>
       <div className={"footer-social-networks"}>
         <div className={`footer-social-networks__header`}>Follow Us</div>
-        <SocialNetworks arraySocialNetworks={arraySocialNetworks} />
+        <SocialNetworks arraySocialNetworks={listIconsFooter} />
       </div>
     </footer>
   )
 }
 
-export default Footer
+const mapStateToProps = (state: any) => ({
+  listIconsFooter: state.icon.listIconsFooter,
+})
+
+export default connect(mapStateToProps)(Footer)

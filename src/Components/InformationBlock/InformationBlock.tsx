@@ -1,25 +1,16 @@
 import React from "react"
 import SocialNetworks from "../SocialNetworks/SocialNetworks"
-import {
-  faPinterestP,
-  faTwitter,
-  faFacebookF,
-  faConnectdevelop,
-} from "@fortawesome/free-brands-svg-icons"
-
-const arraySocialNetworks = [
-  { nameIcon: faPinterestP },
-  { nameIcon: faTwitter },
-  { nameIcon: faFacebookF },
-  { nameIcon: faConnectdevelop },
-]
+import { iconInterface } from "../../Redux/InterfacesEntity/icon.interface"
+import { connect } from "react-redux"
 
 type InformationBlockProps = {
+  listIconsFooter: iconInterface[],
   nameProps?: string,
   classNameProps?: string,
 }
 
 const InformationBlock: React.FunctionComponent<InformationBlockProps> = ({
+  listIconsFooter,
   nameProps,
   classNameProps,
 }) => {
@@ -36,11 +27,15 @@ const InformationBlock: React.FunctionComponent<InformationBlockProps> = ({
         in a piece.
       </p>
       <SocialNetworks
-        arraySocialNetworks={arraySocialNetworks}
+        arraySocialNetworks={listIconsFooter}
         classNameProps={className}
       />
     </div>
   )
 }
 
-export default InformationBlock
+const mapStateToProps = (state: any) => ({
+  listIconsFooter: state.icon.listIconsFooter,
+})
+
+export default connect(mapStateToProps)(InformationBlock)

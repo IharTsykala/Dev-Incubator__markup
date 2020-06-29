@@ -1,12 +1,9 @@
 import React from "react"
 import SocialNetworkIcon from "./SocialNetworkIcon/SocialNetworkIcon"
-
-interface SocialNetwork {
-  nameIcon: string;
-}
+import { iconInterface } from "../../Redux/InterfacesEntity/icon.interface"
 
 type SocialNetworksProps = {
-  arraySocialNetworks: [SocialNetwork] | any,
+  arraySocialNetworks: iconInterface[],
   classNameProps?: string,
 }
 
@@ -20,7 +17,7 @@ const SocialNetworks: React.FunctionComponent<SocialNetworksProps> = ({
       {arraySocialNetworks.map((item: any, index: number) => (
         <SocialNetworkIcon
           key={index}
-          nameIcon={item.nameIcon}
+          iconSVG={item.iconSVG}
           classNameProps={className}
         />
       ))}

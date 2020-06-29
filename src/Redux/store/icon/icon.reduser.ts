@@ -1,5 +1,4 @@
 import { iconInterface } from "../../InterfacesEntity/icon.interface"
-
 import {
   faPinterestP,
   faTwitter,
@@ -15,10 +14,10 @@ const arrayIcons = [
 ]
 
 export interface State {
-  listIcons: iconInterface[];
+  listIconsFooter: iconInterface[];
 }
 
 const initialState: State = {
-  listIcons: arrayIcons,
+  listIconsFooter: arrayIcons,
 }
 export const iconReducer = (state: State = initialState) => state
