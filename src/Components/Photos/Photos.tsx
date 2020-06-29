@@ -24,12 +24,7 @@ const Photos: React.FunctionComponent<OurWorksProps> = ({
       {arrayPhotos.map((item: photoInterface, index: number) => {
         return (
           <li className={`${className}__photo-container`} key={index}>
-            {isInformationBlock && (
-              <InformationBlock
-              // nameProps={item.namePhoto}
-              // classNameProps={className}
-              />
-            )}
+            {isInformationBlock && <InformationBlock />}
             <img
               className={`${className}__photo`}
               src={item.photoIMG}
