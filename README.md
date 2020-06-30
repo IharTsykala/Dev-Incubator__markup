@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Dev-Incubator__markup](https://IharTsykala.github.io/Dev-Incubator__markup)
 
-TS, React-hooks, Redux, react-google-maps/api ,fontawesome, SASS, BEM
+TS, React-hooks, Redux, react-google-maps/api ,fontawesome, SASS, Grid, BEM
